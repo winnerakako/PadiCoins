@@ -1,0 +1,2099 @@
+/*
+0 - 600px : Phone
+600 - 768px : portrait tablets 
+768px - 992px : landscape tablets
+992px - 1200px: mini-laptops/desktops 1104
+1200 - 1800px : laptops .....my desktop
+1800px+: Big desktops
+*/
+/*
+
+$breakpoints 
+-phone
+-tab-port
+-tab-land
+-mini-lap
+-desktop
+-big-desktop
+
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  color: #000;
+  font-size: 93.75%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  padding: 5rem;
+}
+@media only screen and (max-width: 69em) {
+  section {
+    padding: 4rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  section {
+    padding: 3rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  section {
+    padding: 2rem;
+  }
+}
+
+.color {
+  color: #f1590e;
+}
+
+.hidden {
+  display: none;
+}
+
+.inactive-color {
+  color: #cbc8c8;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 1.6rem;
+  outline: none;
+  border: 0;
+  color: #fff;
+  background-color: #f1590e;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  z-index: 20;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.tab-active {
+  border-width: 1px;
+  border-style: solid solid none solid;
+  border-color: #f1590e;
+  color: #f1590e;
+  background-color: rgba(241, 89, 14, 0.01);
+}
+
+.underline,
+.underline-white {
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+.underline::before,
+.underline-white::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  background-color: #f1590e;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.underline-white::before {
+  background-color: #fff;
+}
+
+.hero__cta_register_heading,
+.hero__cta_signIn_heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.hero__cta_register_form .input_group,
+.hero__cta_signIn_form .input_group {
+  margin-top: 1.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.hero__cta_register_form .input_group img,
+.hero__cta_signIn_form .input_group img {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.hero__cta_register_form .input_group input,
+.hero__cta_signIn_form .input_group input {
+  padding: 1.2rem 10px;
+  background-color: #fff;
+  color: #383838;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+.hero__cta_register_form .input_group input:focus-within,
+.hero__cta_signIn_form .input_group input:focus-within {
+  background-color: #fff;
+}
+.hero__cta_register_form .input_group input:-webkit-autofill,
+.hero__cta_register_form .input_group input:-webkit-autofill:hover,
+.hero__cta_register_form .input_group input:-webkit-autofill:focus,
+.hero__cta_register_form .input_group input:-webkit-autofill:active,
+.hero__cta_signIn_form .input_group input:-webkit-autofill,
+.hero__cta_signIn_form .input_group input:-webkit-autofill:hover,
+.hero__cta_signIn_form .input_group input:-webkit-autofill:focus,
+.hero__cta_signIn_form .input_group input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 90px white inset !important;
+  box-shadow: 0 0 0 90px white inset !important;
+}
+.hero__cta_register_form .input_group input:focus::-webkit-input-placeholder,
+.hero__cta_signIn_form .input_group input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.hero__cta_register_form .input_group label,
+.hero__cta_signIn_form .input_group label {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.9rem;
+  background-color: #fff;
+  -webkit-transition: 500ms opacity ease-in;
+  -o-transition: 500ms opacity ease-in;
+  transition: 500ms opacity ease-in;
+  font-weight: 500;
+  padding: 0 10px;
+  color: #383838;
+}
+.hero__cta_register_form
+  .input_group
+  input:not(:-moz-placeholder-shown)
+  ~ label,
+.hero__cta_signIn_form .input_group input:not(:-moz-placeholder-shown) ~ label {
+  top: -20%;
+  left: 5%;
+  opacity: 1;
+  visibility: visible;
+}
+.hero__cta_register_form .input_group input:not(:-ms-input-placeholder) ~ label,
+.hero__cta_signIn_form .input_group input:not(:-ms-input-placeholder) ~ label {
+  top: -20%;
+  left: 5%;
+  opacity: 1;
+  visibility: visible;
+}
+.hero__cta_register_form .input_group:focus-within label,
+.hero__cta_register_form .input_group input:not(:placeholder-shown) ~ label,
+.hero__cta_signIn_form .input_group:focus-within label,
+.hero__cta_signIn_form .input_group input:not(:placeholder-shown) ~ label {
+  top: -20%;
+  left: 5%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero__cta_register_form .sumbit_btn,
+.hero__cta_signIn_form .sumbit_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.hero__cta_register_form .sumbit_btn input,
+.hero__cta_signIn_form .sumbit_btn input {
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
+
+.hero__cta_signIn_3 {
+  margin-top: 5rem;
+  font-size: 2rem;
+}
+
+.hero__cta_buy_heading,
+.hero__cta_trade_heading,
+.hero__cta_sell_heading {
+  font-size: 1rem;
+}
+
+.hero__cta_buy_form .input_select,
+.hero__cta_trade_form .input_select,
+.hero__cta_sell_form .input_select {
+  position: relative;
+  border: 1px solid #cbc8c8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.8rem 0.5rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+}
+.hero__cta_buy_form .input_select img,
+.hero__cta_trade_form .input_select img,
+.hero__cta_sell_form .input_select img {
+  display: inline-block;
+  margin-right: 0.8rem;
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.hero__cta_buy_form .input_select .title,
+.hero__cta_trade_form .input_select .title,
+.hero__cta_sell_form .input_select .title {
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  background: #fff;
+  padding: 0.2rem 0.6rem;
+}
+.hero__cta_buy_form .input_select .coin_name,
+.hero__cta_trade_form .input_select .coin_name,
+.hero__cta_sell_form .input_select .coin_name {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.hero__cta_buy_form .input_select::before,
+.hero__cta_trade_form .input_select::before,
+.hero__cta_sell_form .input_select::before {
+  position: absolute;
+  content: "";
+  top: 1rem;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #000;
+  right: 1rem;
+}
+.hero__cta_buy_form .input_select::after,
+.hero__cta_trade_form .input_select::after,
+.hero__cta_sell_form .input_select::after {
+  position: absolute;
+  content: "";
+  top: 1.7rem;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #000;
+  right: 1rem;
+}
+
+.hero__cta_buy_form .input_group,
+.hero__cta_trade_form .input_group,
+.hero__cta_sell_form .input_group {
+  margin-top: 1.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.hero__cta_buy_form .input_group img,
+.hero__cta_trade_form .input_group img,
+.hero__cta_sell_form .input_group img {
+  display: inline-block;
+  margin-left: 0.8rem;
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.hero__cta_buy_form .input_group input,
+.hero__cta_trade_form .input_group input,
+.hero__cta_sell_form .input_group input {
+  padding: 1.2rem 10px;
+  background-color: #fff;
+  color: #383838;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.hero__cta_buy_form .input_group input:focus-within,
+.hero__cta_trade_form .input_group input:focus-within,
+.hero__cta_sell_form .input_group input:focus-within {
+  background-color: #fff;
+}
+.hero__cta_buy_form .input_group input:-webkit-autofill,
+.hero__cta_buy_form .input_group input:-webkit-autofill:hover,
+.hero__cta_buy_form .input_group input:-webkit-autofill:focus,
+.hero__cta_buy_form .input_group input:-webkit-autofill:active,
+.hero__cta_trade_form .input_group input:-webkit-autofill,
+.hero__cta_trade_form .input_group input:-webkit-autofill:hover,
+.hero__cta_trade_form .input_group input:-webkit-autofill:focus,
+.hero__cta_trade_form .input_group input:-webkit-autofill:active,
+.hero__cta_sell_form .input_group input:-webkit-autofill,
+.hero__cta_sell_form .input_group input:-webkit-autofill:hover,
+.hero__cta_sell_form .input_group input:-webkit-autofill:focus,
+.hero__cta_sell_form .input_group input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 90px white inset !important;
+  box-shadow: 0 0 0 90px white inset !important;
+}
+.hero__cta_buy_form .input_group input:focus::-webkit-input-placeholder,
+.hero__cta_trade_form .input_group input:focus::-webkit-input-placeholder,
+.hero__cta_sell_form .input_group input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.hero__cta_buy_form .input_group label,
+.hero__cta_trade_form .input_group label,
+.hero__cta_sell_form .input_group label {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.6rem;
+  background-color: #fff;
+  -webkit-transition: 500ms opacity ease-in;
+  -o-transition: 500ms opacity ease-in;
+  transition: 500ms opacity ease-in;
+  font-weight: 600;
+  padding: 0 10px;
+  color: #383838;
+}
+.hero__cta_buy_form .input_group input:not(:-moz-placeholder-shown) ~ label,
+.hero__cta_trade_form .input_group input:not(:-moz-placeholder-shown) ~ label,
+.hero__cta_sell_form .input_group input:not(:-moz-placeholder-shown) ~ label {
+  top: -13%;
+  left: 5%;
+  opacity: 1;
+  visibility: visible;
+}
+.hero__cta_buy_form .input_group input:not(:-ms-input-placeholder) ~ label,
+.hero__cta_trade_form .input_group input:not(:-ms-input-placeholder) ~ label,
+.hero__cta_sell_form .input_group input:not(:-ms-input-placeholder) ~ label {
+  top: -13%;
+  left: 5%;
+  opacity: 1;
+  visibility: visible;
+}
+.hero__cta_buy_form .input_group:focus-within label,
+.hero__cta_buy_form .input_group input:not(:placeholder-shown) ~ label,
+.hero__cta_trade_form .input_group:focus-within label,
+.hero__cta_trade_form .input_group input:not(:placeholder-shown) ~ label,
+.hero__cta_sell_form .input_group:focus-within label,
+.hero__cta_sell_form .input_group input:not(:placeholder-shown) ~ label {
+  top: -13%;
+  left: 5%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero__cta-buy--form .sumbit_btn,
+.hero__cta_trade_form .sumbit_btn,
+.hero__cta_sell_form .sumbit_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.hero__cta-buy--form .sumbit_btn input,
+.hero__cta_trade_form .sumbit_btn input,
+.hero__cta_sell_form .sumbit_btn input {
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+}
+
+.hero__cta_sell_mg:nth-child(4) {
+  margin-right: 1rem;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 800;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-more {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 999;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+  -ms-transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transition: all 0.5s 0.3s;
+  -o-transition: all 0.5s 0.3s;
+  transition: all 0.5s 0.3s;
+}
+@media only screen and (max-width: 69em) {
+  .popup-more {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .popup-more {
+    width: 60%;
+    padding: 1.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .popup-more {
+    width: 70%;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .popup-more {
+    left: 0%;
+    bottom: 0%;
+    top: auto;
+    -webkit-transform: translate(0%, 0%) scale(0.5);
+    -ms-transform: translate(0%, 0%) scale(0.5);
+    transform: translate(0%, 0%) scale(0.5);
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+  }
+}
+.popup-more a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: #f1590e;
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 28%;
+}
+@media only screen and (max-width: 43.75em) {
+  .popup-more a {
+    font-size: 1.1rem;
+    gap: 1rem;
+  }
+}
+.popup-more img {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0.8rem;
+  background-color: #f1590e;
+}
+@media only screen and (max-width: 43.75em) {
+  .popup-more img {
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+.popup-more__back {
+  display: none;
+}
+@media only screen and (max-width: 25em) {
+  .popup-more__back {
+    display: block;
+  }
+}
+.popup-more__back a {
+  width: 35%;
+  gap: 0.5rem;
+}
+.popup-more__back a img {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: block;
+  border-radius: 0%;
+  padding: 0rem;
+  background-color: white;
+}
+.popup-more__back p:nth-child(3) {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.popup:target .popup-more {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+@media only screen and (max-width: 25em) {
+  .popup:target .popup-more {
+    -webkit-transform: translate(0%, 0%) scale(1);
+    -ms-transform: translate(0%, 0%) scale(1);
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+.close-popup {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav {
+  position: relative;
+  padding: 1rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  z-index: 5;
+}
+.nav__logo:hover {
+  cursor: pointer;
+}
+.nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+@media only screen and (max-width: 43.75em) {
+  .nav__link {
+    display: none;
+  }
+}
+.nav__link_list {
+  margin: 0 2rem;
+}
+@media only screen and (max-width: 69em) {
+  .nav__link_list {
+    margin: 0 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .nav__link_list {
+    margin: 0 0.5rem;
+  }
+}
+.nav__link_list:last-child {
+  margin-right: 0;
+}
+.nav__link_list_item {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  font-weight: 500;
+}
+@media only screen and (max-width: 56.25em) {
+  .nav__link_list_item {
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+}
+.nav__button {
+  padding: 0.8rem 2rem;
+  border-radius: 1.6rem;
+  text-decoration: none;
+  display: block;
+}
+@media only screen and (max-width: 69em) {
+  .nav__button {
+    display: none;
+  }
+}
+
+.wave {
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+  background-image: url("../../Images/wave.png");
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .wave {
+    height: 60vh;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .wave {
+    height: 50vh;
+  }
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 43.75em) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 5rem;
+  }
+}
+.hero__welcome {
+  width: 45%;
+}
+@media only screen and (max-width: 43.75em) {
+  .hero__welcome {
+    width: 100%;
+  }
+}
+.hero__welcome_main {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 69em) {
+  .hero__welcome_main {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .hero__welcome_main {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .hero__welcome_main {
+    margin-bottom: 1rem;
+  }
+}
+.hero__welcome_sub {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 69em) {
+  .hero__welcome_sub {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .hero__welcome_sub {
+    font-size: 0.8rem;
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .hero__welcome_sub {
+    margin-bottom: 1rem;
+  }
+}
+.hero__welcome_button {
+  display: inline-block;
+  margin-top: 1rem;
+}
+.hero__cta {
+  padding: 0rem 1.5rem;
+  /* width: 33rem; */
+  z-index: 10;
+  background: #fff;
+  -webkit-box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 0.95rem;
+  padding-bottom: 3rem;
+}
+@media only screen and (max-width: 43.75em) {
+  .hero__cta {
+    /* width: 32rem; */
+  }
+}
+@media only screen and (max-width: 25em) {
+  .hero__cta {
+    width: 21rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .hero__cta {
+    width: 18rem;
+  }
+}
+.hero__cta > * {
+  margin: 2rem 0;
+}
+.hero__cta_step {
+  font-weight: 500;
+}
+.hero__cta_progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.hero__cta_progress_bar {
+  width: 20em;
+  height: 0.7em;
+  border-radius: 0.35em;
+  background-color: rgba(241, 89, 14, 0.26);
+  position: relative;
+}
+@media only screen and (max-width: 43.75em) {
+  .hero__cta_progress_bar {
+    width: 20rem;
+  }
+}
+.hero__cta_progress_bar::before {
+  content: "";
+  background-color: #f1590e;
+  position: absolute;
+  width: 60%;
+  height: 0.7em;
+  border-radius: 0.35em;
+}
+.hero__cta_text {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .hero__cta_text {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .hero__cta_text {
+    font-size: 1rem;
+  }
+}
+.hero__cta_option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.hero__cta_option_tab {
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  display: inline-block;
+  border-radius: 3px 3px 0px 0px;
+  font-weight: 500;
+}
+.hero__cta_option .radio {
+  display: none;
+}
+.hero__cta_heading {
+  font-size: 1rem;
+  margin-bottom: -1rem;
+}
+@media only screen and (max-width: 43.75em) {
+  .hero__cta_heading {
+    font-size: 0.8rem;
+    margin-bottom: -1.5rem;
+  }
+}
+
+select {
+  width: 100%;
+  padding: 0.6rem;
+  position: relative;
+}
+@media only screen and (max-width: 43.75em) {
+  select {
+    font-size: 0.8rem;
+  }
+}
+
+.curve {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-image: url("../../Images/curve.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -10px;
+}
+@media only screen and (max-width: 25em) {
+  .curve {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .dashboard {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .dashboard .nav {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.dashboard .nav__link_list_item {
+  color: #fff;
+}
+
+.dashboard .nav__button {
+  background-color: #fff;
+  color: #f1590e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.4rem;
+  position: relative;
+}
+.dashboard .nav__button img {
+  display: inline-block;
+}
+.dashboard .nav__button::before {
+  content: "";
+  position: absolute;
+  border-top: 5px solid #f1590e;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  right: 10%;
+}
+.dashboard .nav__button p {
+  margin-right: 0.5rem;
+}
+
+.dashboard-hero {
+  position: relative;
+  z-index: 100;
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-hero {
+    display: none;
+  }
+}
+.dashboard-hero__text {
+  margin-top: 4rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-hero__text {
+    margin-top: 2rem;
+  }
+}
+.dashboard-hero__text-welcome {
+  margin-bottom: 1rem;
+}
+
+.dashboard-activities {
+  position: relative;
+  z-index: 800;
+  margin-top: -8rem;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-activities {
+    margin-top: -6rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-activities {
+    margin-top: -3rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-activities {
+    display: none;
+  }
+}
+.dashboard-activities__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-activities__options {
+    margin-top: 2rem;
+    width: 85%;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-activities__options h4 {
+    font-size: 0.9rem;
+  }
+}
+.dashboard-activities__options a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #f1590e;
+  text-decoration: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.dashboard-activities__options a img {
+  display: inline-block;
+}
+.dashboard-activities__options_trade_img,
+.dashboard-activities__options-more--img {
+  padding: 1.1rem;
+}
+.dashboard-activities__naira,
+.dashboard-activities__bitcoin,
+.dashboard-activities__eth,
+.dashboard-activities__add {
+  max-height: 6.5rem;
+  width: 40%;
+  margin: 2.5rem auto;
+  padding: 2rem 1rem;
+  -webkit-box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-activities__naira,
+  .dashboard-activities__bitcoin,
+  .dashboard-activities__eth,
+  .dashboard-activities__add {
+    width: 70%;
+  }
+}
+.dashboard-activities__naira a,
+.dashboard-activities__bitcoin a,
+.dashboard-activities__eth a,
+.dashboard-activities__add a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.5rem;
+  color: #000;
+}
+.dashboard-activities__naira a img,
+.dashboard-activities__bitcoin a img,
+.dashboard-activities__eth a img,
+.dashboard-activities__add a img {
+  display: block;
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-activities__naira .text,
+  .dashboard-activities__bitcoin .text,
+  .dashboard-activities__eth .text,
+  .dashboard-activities__add .text {
+    padding-left: 1rem;
+  }
+}
+.dashboard-activities__naira .text p,
+.dashboard-activities__bitcoin .text p,
+.dashboard-activities__eth .text p,
+.dashboard-activities__add .text p {
+  font-weight: 300;
+}
+.dashboard-activities__naira {
+  margin-top: 1.5rem;
+}
+.dashboard-activities__add {
+  background-color: #f1590e;
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-activities__add {
+    padding: 2rem 1rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-activities__add {
+    padding: 1.5rem 1rem;
+  }
+}
+.dashboard-activities__add a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-activities__add a {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-activities__add a .text {
+    padding-left: 0rem !important;
+  }
+}
+
+.hero-dashboard {
+  background: -o-linear-gradient(
+    339.16deg,
+    #f1590e 36.17%,
+    rgba(241, 89, 14, 0.928183) 48.29%,
+    rgba(241, 89, 14, 0.872992) 54.84%,
+    rgba(241, 89, 14, 0.898406) 60.4%,
+    rgba(241, 89, 14, 0.85) 66.7%,
+    rgba(241, 89, 14, 0.99) 75.66%,
+    rgba(241, 89, 14, 0.807835) 90.5%,
+    rgba(241, 89, 14, 0.592108) 97.2%,
+    rgba(241, 89, 14, 0.505766) 101.87%,
+    rgba(241, 89, 14, 0) 133.89%
+  );
+  background: linear-gradient(
+    110.84deg,
+    #f1590e 36.17%,
+    rgba(241, 89, 14, 0.928183) 48.29%,
+    rgba(241, 89, 14, 0.872992) 54.84%,
+    rgba(241, 89, 14, 0.898406) 60.4%,
+    rgba(241, 89, 14, 0.85) 66.7%,
+    rgba(241, 89, 14, 0.99) 75.66%,
+    rgba(241, 89, 14, 0.807835) 90.5%,
+    rgba(241, 89, 14, 0.592108) 97.2%,
+    rgba(241, 89, 14, 0.505766) 101.87%,
+    rgba(241, 89, 14, 0) 133.89%
+  );
+  padding: 1rem;
+  padding-bottom: 5rem;
+  display: none;
+}
+@media only screen and (max-width: 25em) {
+  .hero-dashboard {
+    display: block;
+  }
+}
+.hero-dashboard__text {
+  margin-top: 2rem;
+  color: #fff;
+}
+.hero-dashboard__text-welcome {
+  font-size: 0.7rem;
+  letter-spacing: 0.02rem;
+  font-weight: 300;
+}
+.hero-dashboard__text-amount {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.hero-dashboard__activities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.hero-dashboard__activities a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.hero-dashboard__activities a img {
+  display: block;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.hero-dashboard__activities a h4 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.currency {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-top: -3rem;
+  background: #fff;
+  padding: 1.2rem;
+  display: none;
+}
+@media only screen and (max-width: 25em) {
+  .currency {
+    display: block;
+  }
+}
+.currency__local,
+.currency__crypto {
+  padding-top: 0.5rem;
+}
+.currency__local-title,
+.currency__crypto-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.currency__local-naira,
+.currency__local-btc,
+.currency__local-eth,
+.currency__crypto-naira,
+.currency__crypto-btc,
+.currency__crypto-eth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #000;
+  margin: 0.8rem 0rem;
+  padding: 0.8rem 0.5rem;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.currency__local-img,
+.currency__crypto-img {
+  display: block;
+}
+.currency__local-text,
+.currency__crypto-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.currency__crypto {
+  margin-top: 2rem;
+}
+.currency__crypto-btc,
+.currency__crypto-eth {
+  margin-bottom: 1.5rem;
+}
+.currency__crypto-btc--text h4,
+.currency__crypto-eth--text h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.currency__crypto-btc--text p,
+.currency__crypto-eth--text p {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.curve_naira {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-image: url("../../Images/curve_nigeria.svg");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -10px;
+}
+@media only screen and (max-width: 56.25em) {
+  .curve_naira {
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .curve_naira {
+    height: 45vh;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .curve_naira {
+    display: none;
+  }
+}
+
+.naira-hero {
+  position: relative;
+  z-index: 100;
+}
+@media only screen and (max-width: 25em) {
+  .naira-hero {
+    background-color: #1b9a20;
+    padding-bottom: 5rem;
+  }
+}
+.naira-hero__header {
+  display: none;
+}
+@media only screen and (max-width: 25em) {
+  .naira-hero__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.naira-hero__header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: #fff;
+}
+.naira-hero__header-right p {
+  font-size: 0.9rem;
+}
+.naira-hero__header-right img {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.naira-hero__text {
+  margin-top: 4rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 69em) {
+  .naira-hero__text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .naira-hero__text {
+    padding-bottom: 0.8rem;
+    margin-top: 4rem;
+  }
+}
+.naira-hero__text-welcome {
+  margin-bottom: 0.5rem;
+}
+.naira-hero__text-amount {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.dashboard-naira {
+  position: relative;
+  z-index: 800;
+  margin-top: -8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-naira {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-naira {
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-naira {
+    margin-top: -6rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-naira {
+    margin-top: -2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: #fff;
+  }
+}
+.dashboard-naira__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  padding: 2.5rem 2rem 2rem;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-naira__options {
+    width: 60%;
+    padding: 1.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-naira__options {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-naira__options {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-naira__options {
+    width: 100%;
+    padding: 1rem;
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .dashboard-naira__options {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.dashboard-naira__options a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #f1590e;
+  text-decoration: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+  gap: 0.8rem;
+}
+.dashboard-naira__options a img {
+  display: inline-block;
+}
+.dashboard-naira__options h4 {
+  font-weight: 500;
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-naira__options h4 {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-naira__options h4 {
+    font-size: 0.7rem;
+  }
+}
+.dashboard-naira__transaction {
+  text-align: center;
+  margin: 3rem auto;
+}
+.dashboard-naira__transaction img {
+  display: inline-block;
+}
+.dashboard-naira__transaction-text {
+  font-weight: 500;
+  color: #525050;
+  font-size: 1.2rem;
+}
+.dashboard-naira__start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2.5rem auto;
+  padding: 1.2rem 1rem;
+  width: 20%;
+  border-radius: 8px;
+  text-decoration: none;
+  gap: 0.5rem;
+  color: #fff;
+  background-color: #f1590e;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-naira__start {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-naira__start {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-naira__start {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-naira__start {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .dashboard-naira__start {
+    width: 90%;
+  }
+}
+.dashboard-naira__start img {
+  display: inline-block;
+}
+.dashboard-naira__start .text h3 {
+  font-weight: 300;
+}
+
+.curve_bitcoin {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-image: url("../../Images/curve_bitcoin.svg");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -10px;
+}
+@media only screen and (max-width: 56.25em) {
+  .curve_bitcoin {
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .curve_bitcoin {
+    height: 45vh;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .curve_bitcoin {
+    display: none;
+  }
+}
+
+.bitcoin-hero {
+  position: relative;
+  z-index: 100;
+}
+@media only screen and (max-width: 25em) {
+  .bitcoin-hero {
+    background-color: #f7931a;
+    padding-bottom: 5rem;
+  }
+}
+.bitcoin-hero__header {
+  display: none;
+}
+@media only screen and (max-width: 25em) {
+  .bitcoin-hero__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.bitcoin-hero__header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: #fff;
+}
+.bitcoin-hero__header-right p {
+  font-size: 0.9rem;
+}
+.bitcoin-hero__header-right img {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.bitcoin-hero__text {
+  margin-top: 4rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 69em) {
+  .bitcoin-hero__text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .bitcoin-hero__text {
+    padding-bottom: 0.8rem;
+    margin-top: 4rem;
+  }
+}
+.bitcoin-hero__text-welcome {
+  margin-bottom: 0.5rem;
+}
+.bitcoin-hero__text-amountBTC {
+  font-size: 1.1rem;
+}
+.bitcoin-hero__text-amountNaira {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.dashboard-bitcoin {
+  position: relative;
+  z-index: 800;
+  margin-top: -8rem;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-bitcoin {
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-bitcoin {
+    margin-top: -6rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-bitcoin {
+    margin-top: -2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: #fff;
+  }
+}
+.dashboard-bitcoin__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 45%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-bitcoin__options {
+    width: 60%;
+    padding: 1.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-bitcoin__options {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-bitcoin__options {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-bitcoin__options {
+    width: 100%;
+    padding: 1rem;
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .dashboard-bitcoin__options {
+    width: 100%;
+    padding: 0rem;
+  }
+}
+.dashboard-bitcoin__options a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #f1590e;
+  text-decoration: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.dashboard-bitcoin__options a img {
+  display: inline-block;
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-bitcoin__options a img {
+    width: 56px;
+    height: 56px;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-bitcoin__options a h4 {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-bitcoin__options a h4 {
+    font-size: 0.7rem;
+  }
+}
+.dashboard-bitcoin__options_trade_img,
+.dashboard-bitcoin__options-more--img {
+  padding: 1rem;
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-bitcoin__options-more--img {
+    padding-top: 1.2rem;
+  }
+}
+.dashboard-bitcoin__transaction {
+  text-align: center;
+  margin: 3rem auto;
+}
+.dashboard-bitcoin__transaction img {
+  display: inline-block;
+}
+.dashboard-bitcoin__transaction-text {
+  font-weight: 500;
+  color: #525050;
+  font-size: 1.2rem;
+}
+.dashboard-bitcoin__start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2.5rem auto;
+  padding: 1.2rem 1rem;
+  width: 20%;
+  border-radius: 8px;
+  text-decoration: none;
+  gap: 0.5rem;
+  color: #fff;
+  background-color: #f1590e;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-bitcoin__start {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-bitcoin__start {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-bitcoin__start {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-bitcoin__start {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .dashboard-bitcoin__start {
+    width: 90%;
+  }
+}
+.dashboard-bitcoin__start img {
+  display: inline-block;
+}
+.dashboard-bitcoin__start .text h3 {
+  font-weight: 300;
+}
+
+.curve_ethereum {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-image: url("../../Images/curve_ethereum.svg");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -10px;
+}
+@media only screen and (max-width: 56.25em) {
+  .curve_ethereum {
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .curve_ethereum {
+    height: 45vh;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .curve_ethereum {
+    display: none;
+  }
+}
+
+.ethereum-hero {
+  position: relative;
+  z-index: 100;
+}
+@media only screen and (max-width: 25em) {
+  .ethereum-hero {
+    background-color: #4e537d;
+    padding-bottom: 5rem;
+  }
+}
+.ethereum-hero__header {
+  display: none;
+}
+@media only screen and (max-width: 25em) {
+  .ethereum-hero__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.ethereum-hero__header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: #fff;
+}
+.ethereum-hero__header-right p {
+  font-size: 0.9rem;
+}
+.ethereum-hero__header-right img {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.ethereum-hero__text {
+  margin-top: 4rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 69em) {
+  .ethereum-hero__text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .ethereum-hero__text {
+    padding-bottom: 0.8rem;
+    margin-top: 4rem;
+  }
+}
+.ethereum-hero__text-welcome {
+  margin-bottom: 0.5rem;
+}
+.ethereum-hero__text-amountETH {
+  font-size: 1.1rem;
+}
+.ethereum-hero__text-amountNaira {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.dashboard-ethereum {
+  position: relative;
+  z-index: 800;
+  margin-top: -8rem;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-ethereum {
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-ethereum {
+    margin-top: -6rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-ethereum {
+    margin-top: -2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: #fff;
+  }
+}
+.dashboard-ethereum__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 45%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-ethereum__options {
+    width: 60%;
+    padding: 1.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-ethereum__options {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-ethereum__options {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-ethereum__options {
+    width: 100%;
+    padding: 1rem;
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .dashboard-ethereum__options {
+    width: 100%;
+    padding: 0rem;
+  }
+}
+.dashboard-ethereum__options a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #f1590e;
+  text-decoration: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.dashboard-ethereum__options a img {
+  display: inline-block;
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-ethereum__options a img {
+    width: 56px;
+    height: 56px;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-ethereum__options a h4 {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-ethereum__options a h4 {
+    font-size: 0.7rem;
+  }
+}
+.dashboard-ethereum__options_trade_img,
+.dashboard-ethereum__options-more--img {
+  padding: 1rem;
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-ethereum__options-more--img {
+    padding-top: 1.2rem;
+  }
+}
+.dashboard-ethereum__transaction {
+  text-align: center;
+  margin: 3rem auto;
+}
+.dashboard-ethereum__transaction img {
+  display: inline-block;
+}
+.dashboard-ethereum__transaction-text {
+  font-weight: 500;
+  color: #525050;
+  font-size: 1.2rem;
+}
+.dashboard-ethereum__start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2.5rem auto;
+  padding: 1.2rem 1rem;
+  width: 20%;
+  border-radius: 8px;
+  text-decoration: none;
+  gap: 0.5rem;
+  color: #fff;
+  background-color: #f1590e;
+}
+@media only screen and (max-width: 69em) {
+  .dashboard-ethereum__start {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .dashboard-ethereum__start {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .dashboard-ethereum__start {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dashboard-ethereum__start {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .dashboard-ethereum__start {
+    width: 90%;
+  }
+}
+.dashboard-ethereum__start img {
+  display: inline-block;
+}
+.dashboard-ethereum__start .text h3 {
+  font-weight: 300;
+}
