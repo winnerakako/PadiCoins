@@ -38,7 +38,11 @@ body {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
-
+select {
+  border: none;
+  outline: none;
+  width: 80%;
+}
 section {
   padding: 5rem;
 }
@@ -297,9 +301,9 @@ section {
   top: 1rem;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #000;
   right: 1rem;
 }
 .hero__cta_buy_form .input_select::after,
@@ -310,9 +314,9 @@ section {
   top: 1.7rem;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
   right: 1rem;
 }
 
@@ -822,6 +826,27 @@ section {
   height: 0.7em;
   border-radius: 0.35em;
 }
+.step_2 {
+  width: 20em;
+  height: 0.7em;
+  border-radius: 0.35em;
+  background-color: rgba(241, 89, 14, 0.26);
+  position: relative;
+}
+@media only screen and (max-width: 43.75em) {
+  .step_2 {
+    width: 20rem;
+  }
+}
+.step_2::before {
+  content: "";
+  background-color: #f1590e;
+  position: absolute;
+  width: 100%;
+  height: 0.7em;
+  border-radius: 0.35em;
+}
+
 .hero__cta_text {
   font-weight: 600;
   font-size: 1.25rem;
@@ -866,7 +891,7 @@ section {
 }
 
 select {
-  width: 100%;
+  /* width: 100%; */
   padding: 0.6rem;
   position: relative;
 }
@@ -2096,4 +2121,99 @@ select {
 }
 .dashboard-ethereum__start .text h3 {
   font-weight: 300;
+}
+.dropdown {
+  position: absolute;
+  top: 3rem;
+  /* left:-2px; */
+  width: 100%;
+  overflow-y: scroll;
+  height: auto;
+  background: #fff;
+  z-index: 99999;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 0.8rem;
+}
+.dropdown p {
+  height: 25px;
+  line-height: 25px;
+  padding-left: 10px;
+}
+.dropdown p:hover {
+  background: #f1590e;
+  color: white;
+}
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.input_select,
+.input_group {
+  animation: scaleup 500ms ease-in;
+}
+@keyframes scaleup {
+  from {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.submit_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
+  animation: scaleup 500ms ease-in;
+}
+
+.submit_btn input {
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 3rem;
+}
+.loading {
+  font-size: 3rem;
+  color: #f1590e;
+  animation: spinning 2s infinite;
+}
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dropdown_input {
+  width: 95%;
+  border: none;
+  outline: none;
+  height: 30px;
+  padding: 2px 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-size: small;
+  border-bottom: 1px solid #f1590e;
+  /* border-radius: 5px; */
+  animation: scaleup 300ms ease-in-out;
+}
+.select_dropdown {
+  width: 100%;
+  z-index: 999;
+}
+.search_icon {
+  margin-left: 5px;
+  font-size: 19px;
+  color: #f1590e;
 }

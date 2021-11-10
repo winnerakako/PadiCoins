@@ -18,8 +18,8 @@ const Footer = () => {
         </div>
       </div>
       {footer_links.map((f) => (
-        <div className={styles.footer__developers}>
-          <p className={styles.footer__developers_heading} key={f}>
+        <div className={styles.footer__developers} key={f.title}>
+          <p className={styles.footer__developers_heading} >
             {f.title}
           </p>
           <ul className={styles.footer__developers_link}>

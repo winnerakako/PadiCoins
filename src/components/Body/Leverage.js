@@ -24,7 +24,7 @@ const Leverage = () => {
       </div>
       <div className={styles.leverage__leverage}>
         {leverage.map((l) => (
-          <div className={styles.leverage__leverage_trust}>
+          <div className={styles.leverage__leverage_trust} key = {l.title}>
             <div className={styles.leverage__leverage_trust_img}>
               <img src={l.image} alt="badge-img" />
             </div>

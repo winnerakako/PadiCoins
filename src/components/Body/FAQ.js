@@ -24,6 +24,7 @@ const FAQ = () => {
           <div
             className={styles.faq__question_container}
             onClick={() => toggleHandler(i)}
+            key = {q.title}
           >
             <p className={styles.faq__question_container_label}>{q.title}</p>
             <p className={styles.faq__question_container_answer}>{q.text}</p>

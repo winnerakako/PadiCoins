@@ -10,7 +10,7 @@ const Processes = () => {
       </h2>
       <div className={styles.process__stage}>
         {processes.map((p) => (
-          <div className={styles.process__stage_select}>
+          <div className={styles.process__stage_select} key = {p.title}>
             <div className={styles.process__stage_select_img}>
               <img src={p.image} alt={p.title} />
             </div>
