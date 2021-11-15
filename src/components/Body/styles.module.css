@@ -63,7 +63,7 @@ section {
   }
 }
 @media only screen and (max-width: 43.75em) {
-  .leverage-us {
+  .leverage_us {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;

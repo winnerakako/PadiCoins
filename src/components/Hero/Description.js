@@ -1,6 +1,9 @@
-import React from "react";
+
 import styles from "./styles.module.css";
 import SideForm from "./SideForm";
+
+
+
 const Description = () => {
   return (
     <div>
@@ -25,6 +28,7 @@ const Description = () => {
           </a>
         </div>
         <SideForm />
+        
       </section>
     </div>
   );

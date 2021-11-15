@@ -17,6 +17,7 @@ const Header = () => {
           <li className={styles.nav__link_list} key={l.name}>
             <a
               href={l.path}
+              onClick={l.onClick}
               className={`${styles.nav__link_list_item} ${
                 window.location.href.includes(l.path) ? styles.underline : null
               }`}

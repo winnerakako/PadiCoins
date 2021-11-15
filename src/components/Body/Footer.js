@@ -4,7 +4,7 @@ import logo from "../../Images/logo.png";
 import styles from "./styles.module.css";
 const Footer = () => {
   return (
-    <section className={styles.footer}>
+    <section className={styles.footer} id = "contact">
       <div className={styles.footer__cta}>
         <div className={styles.footer__cta_image}>
           <img src={logo} alt="logo-img" />

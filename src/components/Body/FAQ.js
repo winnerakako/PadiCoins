@@ -9,7 +9,7 @@ const FAQ = () => {
     accordion[i].classList.toggle(styles.active);
   };
   return (
-    <section className={styles.faq}>
+    <section className={styles.faq} id="faq">
       <div className={styles.faq__image}>
         <img src={questions} alt="questions-img" />
       </div>
@@ -24,7 +24,7 @@ const FAQ = () => {
           <div
             className={styles.faq__question_container}
             onClick={() => toggleHandler(i)}
-            key = {q.title}
+            key={q.title}
           >
             <p className={styles.faq__question_container_label}>{q.title}</p>
             <p className={styles.faq__question_container_answer}>{q.text}</p>
