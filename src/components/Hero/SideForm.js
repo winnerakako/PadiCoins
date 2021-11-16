@@ -171,11 +171,15 @@ const SideForm = () => {
     fetch(CREATE_WALLET, { ...postheaders, body: JSON.stringify(body) })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         setCreating(false);
         if (data.success) {
           setWallet(data.data.wallet);
           localStorage.setItem("Wallet", JSON.stringify(data.data.wallet));
+          localStorage.setItem(
+            "track_id",
+            JSON.stringify(data.data.wallet.track_id)
+          );
           setStep2(true);
           topRef.current.scrollIntoView({ behavior: "smooth" });
         } else setError(data.message);

@@ -2,41 +2,22 @@ export const header_links = [
   {
     path: "/",
     name: "Home",
-    onClick: (e) => {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-        block: "center",
-      });
-    },
   },
   {
     path: "/#about",
     name: "About",
-    onClick: (e) => {
-      let path = document.getElementById("about");
-      e.preventDefault();
-      path && path.scrollIntoView({ behavior: "smooth", block: "center" });
-    },
   },
   {
     path: "/#faq",
     name: "FAQ",
-    onClick: (e) => {
-      let path = document.getElementById("faq");
-      e.preventDefault();
-      path && path.scrollIntoView({ behavior: "smooth", block: "center" });
-    },
   },
   {
     path: "/#contact",
     name: "Contact",
-    onClick: (e) => {
-      let path = document.getElementById("contact");
-      e.preventDefault();
-      path && path.scrollIntoView({ behavior: "smooth", block: "center" });
-    },
+  },
+  {
+    path: "/#wallet",
+    name: "Wallet",
   },
 ];
 

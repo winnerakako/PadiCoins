@@ -47,7 +47,7 @@ const WalletDetails = ({ wallet, close }) => {
         Your bank account will be credited after transaction has been confirmed.
       </p>
       <p className={styles.wallet_address_paragraph}>
-        Track this transaction
+        Track your wallet
         <span
           className={styles.track_wallet_link}
           onClick={() => setTrack(true)}

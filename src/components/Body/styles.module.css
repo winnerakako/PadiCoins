@@ -10,6 +10,7 @@
 html {
   color: #000;
   font-size: 93.75%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,7 +60,7 @@ section {
 @media only screen and (max-width: 69em) {
   .leverage_us {
     margin-top: 3rem;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }
 @media only screen and (max-width: 43.75em) {
