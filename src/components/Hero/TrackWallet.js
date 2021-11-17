@@ -34,7 +34,6 @@ const TrackWallet = ({ close }) => {
     setEmpty(false);
     if (value) {
       setLoading(true);
-      console.log("track id found");
       fetch(`${TRACK_WALLET}/${value}`)
         .then((res) => res.json())
         .then((data) => {
@@ -68,7 +67,6 @@ const TrackWallet = ({ close }) => {
     }, 500);
     setWallet(null);
     setValue("");
-    localStorage.removeItem("track_id");
   };
   useEffect(() => {
     trackHandler();
@@ -125,8 +123,8 @@ const TrackWallet = ({ close }) => {
                 </p>
                 <div className={styles.track_wallet_header}>
                   <span className={styles.track_span_date}>Date</span>
-                  <span>Coin</span>
-                  <span>Sent</span>
+                  <span className={styles.track_span_coin}> Coin</span>
+                  <span className={styles.track_span_sent}>Sent</span>
                   <span>Received</span>
                   <span>Confirmations</span>
                   <span className={styles.track_span_hide}>Complete</span>

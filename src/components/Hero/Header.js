@@ -41,7 +41,7 @@ const Header = () => {
         <a href="/" className={`${styles.nav__button} ${styles.btn}`}>
           Get Started
         </a>
-        <FaBars onClick={() => setMenu(true)}/>
+        <FaBars onClick={() => setMenu(true)} className = {styles.menuBar}/>
       </nav>
       {wallet && <TrackWallet close={() => setWallet(false)} />}
       {menu && <Menu close={() => setMenu(false)} />}

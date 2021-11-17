@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import carbon from "../../Images/carbon_money.svg";
 import person1 from "../../Images/person_1.svg";
 import moneybag from "../../Images/money_bag.svg";
+import bank from "../../Images/bank.svg";
 import pencil from "../../Images/pencil_icon.svg";
 import success from "../../Images/success.png";
 import mail from "../../Images/mail.svg";
@@ -167,11 +168,9 @@ const SideForm = () => {
       bank_id: selectFields.bank.value.id,
       coin_id: selectFields.coin.value.id,
     };
-    console.log(body);
     fetch(CREATE_WALLET, { ...postheaders, body: JSON.stringify(body) })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setCreating(false);
         if (data.success) {
           setWallet(data.data.wallet);
@@ -184,9 +183,7 @@ const SideForm = () => {
           topRef.current.scrollIntoView({ behavior: "smooth" });
         } else setError(data.message);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
   };
   useEffect(() => {
     fetch(GET_COINS)
@@ -200,7 +197,7 @@ const SideForm = () => {
       .then((data) => {
         setBanks(data.data.banks);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {});
   }, []);
 
   return (
@@ -221,7 +218,7 @@ const SideForm = () => {
         </div>
         {!step2 ? (
           <>
-            <p className={styles.hero__cta_text}>Buy and Sell Instantly</p>
+            <p className={styles.hero__cta_text}>Sell Instantly</p>
 
             <div className={`${styles.hero__cta_sell}`} id="sell">
               <p className={styles.hero__cta_sell_heading}>
@@ -257,7 +254,7 @@ const SideForm = () => {
 
                 {selectFields.bank.display && (
                   <div className={styles.input_select}>
-                    <img src={moneybag} alt="money-img" />
+                    <img src={bank} alt="money-img" />
                     <p className={styles.title}>Select Bank </p>
                     <p
                       className={styles.select_dropdown}
@@ -307,12 +304,12 @@ const SideForm = () => {
                         <span className={styles.name_span}>
                           {selectFields.account.value.name}
                         </span>
-                        <img src={success} alt="" />
+                        <img src={success} alt="success logo" />
                       </>
                     )}
                     {accountError && (
                       <p className={styles.account_error}>
-                        Your account cannot be verified. Try again.
+                        This account cannot be verified. Try again.
                       </p>
                     )}
                   </div>
@@ -363,7 +360,7 @@ const SideForm = () => {
                         value={checked}
                       />{" "}
                       I hearby agree that I have read and understood Padicoins
-                      policies, terms and conditions found{" "}
+                      policies, terms and conditions found
                       <span className={styles.track_wallet_link}>here.</span>
                     </p>
                     <div className={styles.submit_btn}>

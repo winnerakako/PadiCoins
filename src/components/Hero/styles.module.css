@@ -67,6 +67,7 @@ section {
   }
   .track_wallet_container {
     font-size: smaller;
+    opacity: 1;
     margin-top: 15% !important;
   }
 
@@ -75,13 +76,25 @@ section {
   }
   .track_span_date {
     text-align: left !important;
-    padding-left: 9px !important;
+    padding-left: 5% !important;
+  }
+  .track_span_coin,
+  .track_span_sent {
+    text-align: left !important;
+    padding-left: 6% !important;
   }
   .nav {
     padding: 1rem !important;
   }
+  .menuBar {
+    display: block !important;
+  }
 }
-
+.menuBar {
+  display: none;
+  color: #f1590e;
+  font-weight: bolder;
+}
 .color {
   color: #f1590e;
 }
@@ -624,7 +637,6 @@ section {
 
 .nav {
   position: relative;
-  /* position: fixed; */
   border-bottom: red;
   padding: 1rem 3rem;
   display: -webkit-box;
@@ -636,10 +648,6 @@ section {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  /* height: 70px;
-  z-index: 9999;
-  width: 100%;
-  background: #fef2fc; */
 }
 .nav__logo:hover {
   cursor: pointer;
@@ -792,7 +800,6 @@ section {
 .hero__cta {
   padding: 0rem 1.5rem;
   width: 33rem;
-  /* z-index: 10; */
   background: #fff;
   -webkit-box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
@@ -919,7 +926,6 @@ section {
 }
 
 select {
-  /* width: 100%; */
   padding: 0.6rem;
   position: relative;
 }
@@ -2153,7 +2159,6 @@ select {
 .dropdown {
   position: absolute;
   top: 3rem;
-  /* left:-2px; */
   width: 100%;
   overflow-y: scroll;
   height: auto;
@@ -2184,7 +2189,6 @@ select {
   width: 100%;
   position: fixed;
   background: #000;
-  opacity: 0.9;
   top: 0;
   left: 0;
 }
@@ -2219,10 +2223,7 @@ select {
   font-weight: 600;
   padding: 1rem 3rem;
 }
-/* .submit_btn button {
-  border:none;
-  outline:none;
-} */
+
 .loading {
   font-size: 3rem;
   color: #f1590e;
@@ -2247,7 +2248,6 @@ select {
   margin-left: 5px;
   font-size: small;
   border-bottom: 1px solid #f1590e;
-  /* border-radius: 5px; */
   animation: scaleup 300ms ease-in-out;
 }
 .select_dropdown {
@@ -2355,7 +2355,7 @@ select {
   transform: translate(-50%, 0%);
   background: white;
   width: 100%;
-  z-index: 30;
+  z-index: 999999;
   animation: slideFromTop 500ms;
 }
 @keyframes slideFromTop {
@@ -2448,7 +2448,6 @@ select {
   width: 100%;
   font-size: smaller;
   display: flex;
-  /* justify-content: space-between; */
   border-bottom: 1px solid white;
 }
 .track_wallet_header {
@@ -2459,14 +2458,11 @@ select {
 .track_wallet_header span {
   width: 20%;
   text-align: center;
-  /* border: 1px solid rgb(146, 85, 85); */
 }
 .track_ul {
   list-style-type: none;
   overflow-y: scroll;
   display: flex;
-
-  /* justify-content: space-between; */
   height: 90%;
   flex-direction: column;
 }
@@ -2481,7 +2477,6 @@ select {
 .track_list_item span {
   width: 15%;
   text-align: center;
-  /* border: 1px solid white; */
 }
 .menu {
   width: 50%;
@@ -2493,11 +2488,8 @@ select {
   top: 0;
   right: 0;
   z-index: 999999999999;
-  opacity: 0.96;
-  /* color: #000; */
-  color: #f4693e;
-  /* background: #fff; */
-  background: #0b0b0b;
+  color: #000;
+  background: #fef2fc;
   animation: sliding 1s linear;
 }
 .menu_links {
@@ -2505,15 +2497,16 @@ select {
   text-align: center;
   width: 100%;
   text-decoration: none;
-  color: white;
+  color: #000;
   margin: 10px 0;
 }
 .menu_links:hover {
-  color: #f4693e;
+  color: #f1590e;
 }
 .menu_cancel {
   margin-left: auto;
   padding-right: 10px;
+  margin-bottom: 25%;
 }
 @keyframes sliding {
   from {
