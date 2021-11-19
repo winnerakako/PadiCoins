@@ -10,9 +10,12 @@ const Menu = ({ close }) => {
         X
       </p>
       <a
-        href="/#wallet"
+        href=""
         className={styles.menu_links}
-        onClick={() => setWallet(true)}
+        onClick={(e) => {
+          e.preventDefault();
+          setWallet(true);
+        }}
       >
         Wallet
       </a>

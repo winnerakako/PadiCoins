@@ -2378,7 +2378,7 @@ select {
   margin: 10px 0 1%;
 }
 .track_container form {
-  margin-top: 5%;
+  margin-top: 25%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -2388,7 +2388,7 @@ select {
   background: #f1590e;
   color: white;
   padding: 1% 3%;
-  margin-top: 10px;
+  margin-top: 25px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -2415,6 +2415,12 @@ select {
   padding: 5% 3%;
   margin-top: 3%;
 }
+.padi_wallet_name {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  color: #f1590e;
+}
 
 .track_wallet_status_info {
   width: 100%;
@@ -2431,7 +2437,7 @@ select {
 .track_wallet_cancel {
   position: absolute;
   left: 3%;
-  top: 2%;
+  top: 5%;
   font-weight: 800;
   font-size: 1.5rem;
   color: #f1590e;

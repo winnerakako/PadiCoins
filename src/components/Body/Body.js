@@ -6,7 +6,7 @@ import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Copyright from "./Copyright";
 import MoreInfo from "./MoreInfo";
-import Information from "./Information";
+import Community from "./Community";
 
 const Section = () => {
   return (
@@ -15,7 +15,7 @@ const Section = () => {
         <Leverage />
         <Processes />
       </section>
-      <Information />
+      <Community />
       <FAQ />
       <MoreInfo />
       <Footer />

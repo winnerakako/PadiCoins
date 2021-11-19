@@ -16,7 +16,7 @@ export const header_links = [
     name: "Contact",
   },
   {
-    path: "/#wallet",
+    path: "",
     name: "Wallet",
   },
 ];

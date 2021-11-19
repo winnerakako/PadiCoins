@@ -12,19 +12,30 @@ const Leverage = () => {
         <div className={styles.leverage_us__about}>
           <p className={styles.leverage_us__about_main}>ABOUT US</p>
           <p className={styles.leverage_us__about_sub}>
-            Buy, sell and trade crypto in minutes.
+            Sell crypto in minutes.
           </p>
         </div>
         <div className={styles.leverage_us__text}>
           <p className={styles.leverage_us__text_sub}>
-            Padi<span className={styles.color}> Coins</span> is the easiest way
-            to buy and sell crypto in Nigeria. No payment delay. No stress.
+            Padi<span className={styles.color}> Coins</span> exists to simplify
+            the process of trading cryptocurrencies in Nigeria.
+          </p>
+          <p>
+            As an exchange platform with a vision to see almost every Nigerian
+            benefitting from the enormous opportunities of cryptocurrencies, we
+            are here to make the process easy, fast and seamless.{" "}
+          </p>
+
+          <p>
+            Our rates are comparatively the best in Nigeria as we strive to
+            provide the quickest and most reliable crypto trading experiences to
+            our users.
           </p>
         </div>
       </div>
       <div className={styles.leverage__leverage}>
         {leverage.map((l) => (
-          <div className={styles.leverage__leverage_trust} key = {l.title}>
+          <div className={styles.leverage__leverage_trust} key={l.title}>
             <div className={styles.leverage__leverage_trust_img}>
               <img src={l.image} alt="badge-img" />
             </div>

@@ -50,7 +50,9 @@ const TrackWallet = ({ close }) => {
             setWallet(null);
           }
         })
-        .catch((err) => {});
+        .catch((err) => {
+          console.log(err);
+        });
     } else if (!value) {
       setForm(true);
       setTimeout(() => {
@@ -74,7 +76,7 @@ const TrackWallet = ({ close }) => {
 
   return (
     <>
-      <div className={styles.overlay}></div>
+      <div className={styles.overlay_gray}></div>
       <div className={styles.track_container}>
         {loading ? (
           <ImSpinner6 className={`${styles.loading} ${styles.track_loading}`} />
@@ -86,12 +88,13 @@ const TrackWallet = ({ close }) => {
         {wallet && (
           <button
             onClick={startTrack}
-            style={{ position: "absolute", right: "3%", top: "1%" }}
+            style={{ position: "absolute", right: "3%", top: "5%" }}
             className={styles.wallet_options_copy}
           >
             Track Wallet
           </button>
         )}
+        <h1 className={styles.padi_wallet_name}>Padi Wallet</h1>
 
         {form && (
           <>

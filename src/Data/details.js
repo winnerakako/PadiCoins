@@ -26,31 +26,36 @@ export const processes = [
   {
     title: "Select a coin",
     image: portfolio,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt",
+    text: "Select a coin from the list of available coins",
   },
   {
-    title: "Trasact without stress",
+    title: "Create a wallet",
     image: transfer,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt",
+    text: "Only your account number, mobile number and email address are needed to automatically generate a wallet address for you to send your coins to.",
   },
   {
     title: "Complete Transaction",
     image: confirmation,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt",
+    text: "Once your transaction has been confirmed, your bank account will be credited instantly.",
   },
 ];
 
 export const frequentQuestions = [
   {
-    title: "Is PadiCoins Secured?",
-    text: "The security of your cryptocurrency is our highest priority We've built one of the world's most sophisticated security systems and have industry-leading processes in place.",
+    title: "What is PadiCoins?",
+    text: "Padicoins is one of the most secured and trusted cryptocurrency exchange platform in Nigeria where people can easily trade crypto and receive direct payment into their bank accounts with zero charges .",
   },
   {
-    title: "How do I withdraw into my PadiCoins Wallet Account?",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quo inventore quos eius quod eligendi molestiae quae illo reprehenderit itaque autem laboriosam consequuntur labore architecto atque ipsa minus culpa non, optio totam laborum. Perspiciatis fugiat quidem quibusdam labore, enim, voluptatum numquam quae corrupti incidunt, laudantium a? Temporibus nulla porro molestiae quod in numquam ex maxime at amet dignissimos magnam, tempore, nostrum voluptates esse quasi debitis eum itaque eaque aliquam recusandae tenetur asperiores, libero nesciunt tempora. Sed non nulla eum tempore perferendis est voluptatem nobis beatae, aperiam fugit dolorem inventore ratione quibusdam maxime reiciendis dignissimosconsequuntur quis quo, obcaecati saepe illum.",
+    title: "Is PadiCoins safe?",
+    text: "Yes! We use the best cutting-edge technologies to protect our website and secure the privacy and informaton of our users",
   },
   {
-    title: "How can i deposit into my Account?",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam repudiandae seq minima cupiditate rem inventore unde expedita voluptatibus nulla quo.",
+    title:
+      "Do I need to register with my ID card and other KYC requirements before I can sell?",
+    text: "No! All you need are your account number, phone number and email address only. It's that easy.",
+  },
+  {
+    title: "How do I withdraw into my bank account?",
+    text: "There is no long process for that as it is automatic.As soon as we receive your coin transfer, you get an instant credit alert. ",
   },
 ];

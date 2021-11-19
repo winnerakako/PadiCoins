@@ -1,13 +1,12 @@
-const BASE_URL = "https://padicoins-test.herokuapp.com/api";
+const BASE_URL = "https://padicoins.com.ng/api";
 export const postheaders = {
-    method: "POST",
-      headers: {
-        "Accept": "Application/json",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      }
-}
-
+  method: "POST",
+  headers: {
+    Accept: "Application/json",
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  },
+};
 
 export const GET_BANKS = `${BASE_URL}/banks`;
 export const GET_COINS = `${BASE_URL}/coins`;
