@@ -59,11 +59,19 @@ section {
   .nav__link{
     flex:0 !important;
   }
+  .nav__logo_image{
+    margin-left: 3% !important;
+   
+}
 }
 @media only screen and (min-width:800px) and (max-width:900px) {
   .nav__button{
        padding: 0.4rem 2rem !important;
   }
+  .nav__logo_image{
+    margin-left: 0 !important;
+   
+}
 }
 @media only screen and (max-width: 69em) {
   section {
@@ -112,7 +120,7 @@ section {
 .nav__logo_image{
  width: 50%;
     height: 100%;
-    margin-left: 3%;
+    margin-left: 10%;
 }
 .menuBar {
   display: none;
@@ -668,6 +676,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top:10px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
