@@ -664,6 +664,7 @@ section {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 2rem;
+        text-align: center;
   }
 }
 @media only screen and (max-width: 43.75em) {
