@@ -1,10 +1,13 @@
 import React from "react";
+import logo from "../../Images/padicon.png";
 import styles from "./styles.module.css";
 
 const Copyright = () => {
   return (
     <div className={styles.footer__copyright}>
-      <p className={styles.footer__copyright_text}>BitMoney &copy; 2021</p>
+      <p className={styles.footer__copyright_text}>
+      <img src = {logo} className = {styles.copyright_img} alt = "padicoins-logo"/>
+      PadiCoins &copy; 2021</p>
 
       <div className={styles.footer__copyright_social}>
         <a href="/">

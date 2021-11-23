@@ -51,10 +51,25 @@ select {
 section {
   padding: 5rem;
 }
+
+@media only screen and (max-width:800px) {
+  .nav__button{
+    display:none !important;
+  }
+  .nav__link{
+    flex:0 !important;
+  }
+}
+@media only screen and (min-width:800px) and (max-width:900px) {
+  .nav__button{
+       padding: 0.4rem 2rem !important;
+  }
+}
 @media only screen and (max-width: 69em) {
   section {
     padding: 4rem;
   }
+  
 }
 @media only screen and (max-width: 56.25em) {
   section {
@@ -89,10 +104,20 @@ section {
   .menuBar {
     display: block !important;
   }
+ .nav__logo{
+  width:40% !important;
+
+}
+}
+.nav__logo_image{
+ width: 50%;
+    height: 100%;
+    margin-left: 3%;
 }
 .menuBar {
   display: none;
   color: #f1590e;
+  margin-top:-10px;
   font-weight: bolder;
 }
 .color {
@@ -588,6 +613,7 @@ section {
     height: 40px;
   }
 }
+
 .popup-more__back {
   display: none;
 }
@@ -657,6 +683,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+      margin-top: -16px;
+      flex:1
 }
 @media only screen and (max-width: 43.75em) {
   .nav__link {
@@ -696,12 +724,14 @@ section {
   border-radius: 1.6rem;
   text-decoration: none;
   display: block;
+   margin-top: -16px;
 }
-@media only screen and (max-width: 69em) {
-  .nav__button {
-    display: none;
-  }
+.nav__logo{
+  width:30%;
+
 }
+
+
 
 .wave {
   height: 70vh;
@@ -2378,7 +2408,7 @@ select {
   margin: 10px 0 1%;
 }
 .track_container form {
-  margin-top: 25%;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -2418,8 +2448,9 @@ select {
 .padi_wallet_name {
   position: absolute;
   top: 90px;
-  left: 20px;
+  left: 3.3%;
   color: #f1590e;
+  font-size: 1.5rem;
 }
 
 .track_wallet_status_info {

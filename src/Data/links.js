@@ -15,10 +15,10 @@ export const header_links = [
     path: "/#contact",
     name: "Contact",
   },
-  {
-    path: "",
-    name: "Wallet",
-  },
+  // {
+  //   path: "/",
+  //   name: "Wallet",
+  // },
 ];
 
 export const footer_links = [

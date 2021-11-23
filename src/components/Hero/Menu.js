@@ -10,7 +10,7 @@ const Menu = ({ close }) => {
         X
       </p>
       <a
-        href=""
+        href="/"
         className={styles.menu_links}
         onClick={(e) => {
           e.preventDefault();

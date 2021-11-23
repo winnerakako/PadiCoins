@@ -1,15 +1,15 @@
 import React from "react";
 import { footer_links } from "../../Data/links";
-import logo from "../../Images/logo.png";
+import logo from "../../Images/padilogo.png";
 import styles from "./styles.module.css";
 const Footer = () => {
   return (
     <section className={styles.footer} id = "contact">
       <div className={styles.footer__cta}>
         <div className={styles.footer__cta_image}>
-          <img src={logo} alt="logo-img" />
+          <img src={logo} alt="logo-img" style = {{width: "100%"}}/>
           <p className={styles.footer__cta_text}>
-            BitMoney is the easiest way to buy and sell crypto in Nigeria. No
+           PadiCoins is the easiest way to buy and sell crypto in Nigeria. No
             payment delay. No stress.
           </p>
           <a href="/" className={`${styles.footer__cta_button} ${styles.btn}`}>

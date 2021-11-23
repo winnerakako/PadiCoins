@@ -10,7 +10,7 @@ const Description = () => {
       <section className={styles.hero}>
         <div className={styles.hero__welcome}>
           <h1 className={styles.hero__welcome_main}>
-            Buy, sell and trade crypto
+            Sell crypto
             <span className={styles.color} style={{ marginLeft: "7px" }}>
               Instantly.
             </span>

@@ -92,6 +92,11 @@ section {
 .leverage_us__about_sub {
   font-size: 1.875rem;
 }
+.copyright_img{
+  width: 4%;
+    height: 10%;
+    margin-right: 10px;
+}
 @media only screen and (max-width: 69em) {
   .leverage_us__about_sub {
     font-size: 1.6rem;

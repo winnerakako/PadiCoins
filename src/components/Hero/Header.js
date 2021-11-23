@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../Images/logo.png";
+import logo from "../../Images/paditransparent.png";
 import { header_links } from "../../Data/links";
 import TrackWallet from "./TrackWallet";
 import Menu from "./Menu";
@@ -9,17 +9,12 @@ import styles from "./styles.module.css";
 const Header = () => {
   const [wallet, setWallet] = useState(false);
   const [menu, setMenu] = useState(false);
-  const checkWallet = (e) => {
-    e.preventDefault();
-    setWallet(true);
-  };
+
   return (
     <>
       <nav className={styles.nav}>
         <div className={styles.nav__logo}>
-          <a href="/">
-            <img src={logo} alt="logo-img" />
-          </a>
+            <img src={logo} alt="logo-img" className = {styles.nav__logo_image} />
         </div>
 
         <ul className={styles.nav__link}>
@@ -27,7 +22,7 @@ const Header = () => {
             <li className={styles.nav__link_list} key={l.name}>
               <a
                 href={l.path}
-                onClick={() => l.path === "" && checkWallet()}
+                
                 className={`${styles.nav__link_list_item} ${
                   window.location.href.includes(l.path)
                     ? styles.underline
@@ -38,6 +33,7 @@ const Header = () => {
               </a>
             </li>
           ))}
+            <span onClick={() => setWallet(true)} style = {{fontWeight:"500", cursor:"pointer"}}>Wallet</span>
         </ul>
         <a href="/" className={`${styles.nav__button} ${styles.btn}`}>
           Get Started
