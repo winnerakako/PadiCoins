@@ -22,12 +22,12 @@ const Menu = ({ close }) => {
       <a href="/#contact" className={styles.menu_links}>
         Contact
       </a>
-      <a href="/#contact" className={styles.menu_links}>
+      {/* <a href="/#contact" className={styles.menu_links}>
         Log In
       </a>
       <a href="/#contact" className={styles.menu_links}>
         Sign Up
-      </a>
+      </a> */}
       {wallet && <TrackWallet close={() => setWallet(false)} />}
     </div>
   );

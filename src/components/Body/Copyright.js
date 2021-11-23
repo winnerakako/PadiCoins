@@ -10,11 +10,11 @@ const Copyright = () => {
       PadiCoins &copy; 2021</p>
 
       <div className={styles.footer__copyright_social}>
-        <a href="/">
+        <a href="https://facebook.com/PadiCoins-102301852283964">
           {" "}
           <i className="fab fa-facebook"></i>
         </a>
-        <a href="/">
+        <a href="https://instagram.com/padicoins">
           <i className="fab fa-instagram"></i>
         </a>
         <a href="/">

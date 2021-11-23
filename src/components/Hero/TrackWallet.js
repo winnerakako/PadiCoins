@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+
+import { useState, useEffect, useRef} from "react";
 import { TRACK_WALLET } from "../../Data/requests";
 import { ImSpinner6 } from "react-icons/im";
 import {
@@ -72,7 +73,8 @@ const TrackWallet = ({ close }) => {
   };
   useEffect(() => {
     trackHandler();
-  }, []);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); 
 
   return (
     <>
@@ -102,7 +104,7 @@ const TrackWallet = ({ close }) => {
               <input
                 placeholder="Enter track ID..."
                 value={value}
-                onChange={(e) => setValue(e.target.value)}
+                onChange= {(e)=> setValue(e.target.value)}
                 ref={inputRef}
               />
 

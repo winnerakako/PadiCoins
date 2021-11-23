@@ -15,44 +15,20 @@ export const header_links = [
     path: "/#contact",
     name: "Contact",
   },
-  // {
-  //   path: "/",
-  //   name: "Wallet",
-  // },
+ 
 ];
 
 export const footer_links = [
   {
-    title: "Developers",
+    title: "Contact",
     links: [
       {
-        name: "Integrations",
-        path: "/",
+        name: "support@padicoins.com",
+        path: "mailto:support@padicoins.com",
       },
       {
-        name: "Technical Help",
-        path: "/",
-      },
-      {
-        name: "Overview",
-        path: "/",
-      },
-      {
-        name: "Documentation",
-        path: "/",
-      },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      {
-        name: "Knowledge Base",
-        path: "/",
-      },
-      {
-        name: "Help",
-        path: "/",
+        name: "Call 09063615051",
+        path: "tel:090-6361-5051",
       },
       {
         name: "FAQ",
@@ -65,15 +41,7 @@ export const footer_links = [
     links: [
       {
         name: "About Us",
-        path: "/about",
-      },
-      {
-        name: "Careers",
-        path: "/",
-      },
-      {
-        name: "Blog",
-        path: "/",
+        path: "/#about",
       },
       {
         name: "Privacy Policy",
@@ -86,20 +54,20 @@ export const footer_links = [
     links: [
       {
         name: "Buy Crypto",
-        path: "/about",
+       
       },
       {
         name: "Sell Crypto",
-        path: "/",
+    
       },
       {
-        name: "Margin Trade",
-        path: "/",
+        name: "Trade Crypto",
+    
       },
       {
-        name: "Our Fees",
-        path: "/",
-      },
+        name: "Download Our App",
+      
+      }
     ],
   },
 ];

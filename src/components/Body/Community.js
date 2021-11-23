@@ -15,7 +15,7 @@ const Community = () => {
           Do you want to sell your cryptocurrencies immediately and receive
           payments instantly?
           <br />
-          Skip thse unnecessary registrations and let's get down to business!
+          Skip those unnecessary registrations and let's get down to business!
         </p>
       </div>
       <a

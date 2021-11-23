@@ -56,6 +56,6 @@ export const frequentQuestions = [
   },
   {
     title: "How do I withdraw into my bank account?",
-    text: "There is no long process for that as it is automatic.As soon as we receive your coin transfer, you get an instant credit alert. ",
+    text: "It is an automatic process.As soon as we receive your coin transfer, you get an instant credit alert. ",
   },
 ];

@@ -1,8 +1,9 @@
-import React from "react";
+import Roll from "react-reveal/Roll"
 import styles from "./styles.module.css";
 
 const MoreInfo = () => {
   return (
+    <Roll bottom >
     <section className={styles.cta}>
       <h1 className={`${styles.cta__heading} ${styles.underline}`}>
         Buy and Sell Crypto <span className={styles.color}> Instantly. </span>
@@ -17,6 +18,7 @@ const MoreInfo = () => {
       </a>
       <div className={styles.cta_wave}></div>
     </section>
+    </Roll>
   );
 };
 

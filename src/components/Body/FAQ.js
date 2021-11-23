@@ -1,5 +1,8 @@
 import { frequentQuestions } from "../../Data/details";
 import questions from "../../Images/questions.png";
+import Fade from "react-reveal/Fade"
+import Tada from "react-reveal/Tada"
+import Bounce from "react-reveal/Bounce"
 import styles from "./styles.module.css";
 const FAQ = () => {
   const toggleHandler = (i) => {
@@ -10,17 +13,23 @@ const FAQ = () => {
   };
   return (
     <section className={styles.faq} id="faq">
+    <Tada>
       <div className={styles.faq__image}>
         <img src={questions} alt="questions-img" />
       </div>
+      </Tada>
       <div className={styles.faq__question}>
         <div className={styles.faq__question_title}>
+        <Fade right cascade >
           <h2>Frequently Asked Questions</h2>
+          </Fade>
           <a href="/" className={styles.underline}>
             View All
           </a>
         </div>
         {frequentQuestions.map((q, i) => (
+                  <Bounce bottom cascade>
+
           <div
             className={styles.faq__question_container}
             onClick={() => toggleHandler(i)}
@@ -29,6 +38,7 @@ const FAQ = () => {
             <p className={styles.faq__question_container_label}>{q.title}</p>
             <p className={styles.faq__question_container_answer}>{q.text}</p>
           </div>
+          </Bounce>
         ))}
       </div>
     </section>
