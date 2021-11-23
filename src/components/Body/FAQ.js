@@ -1,7 +1,6 @@
 import { frequentQuestions } from "../../Data/details";
 import questions from "../../Images/questions.png";
 import Fade from "react-reveal/Fade"
-import Tada from "react-reveal/Tada"
 import Bounce from "react-reveal/Bounce"
 import styles from "./styles.module.css";
 const FAQ = () => {
@@ -13,11 +12,11 @@ const FAQ = () => {
   };
   return (
     <section className={styles.faq} id="faq">
-    <Tada>
+  
       <div className={styles.faq__image}>
         <img src={questions} alt="questions-img" />
       </div>
-      </Tada>
+ 
       <div className={styles.faq__question}>
         <div className={styles.faq__question_title}>
         <Fade right cascade >

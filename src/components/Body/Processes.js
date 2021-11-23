@@ -14,7 +14,7 @@ const Processes = () => {
       </Fade>
       <div className={styles.process__stage}>
         {processes.map((p, i) => (
-          <Zoom delay={(i)*1000}>
+          <Zoom delay={(i)*500}>
           <div className={styles.process__stage_select} key = {p.title}>
             <div className={styles.process__stage_select_img}>
               <img src={p.image} alt={p.title} />
