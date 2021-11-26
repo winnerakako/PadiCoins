@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Header from "../Hero/Header";
 import { NavLink } from "react-router-dom";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import styles from "./styles.module.css";
 
 const Terms = () => {
@@ -15,7 +16,7 @@ const Terms = () => {
         <div style={{ height: "80px" }} ref={ref}></div>
         <h2 className={styles.terms_heading}>Terms and Conditions</h2>
         <div>
-          <p>
+          <div>
             This will serve as an agreement between you and us. This Terms of
             Use is entered into by you (which will be hereafter referred to
             “you” or “your”) and our operators. By accessing, using or clicking
@@ -23,19 +24,16 @@ const Terms = () => {
             you have read, understood and accepted all the terms and conditions
             stipulated in this Terms of Use (herein after referred to as “these
             Terms”) as well as our{" "}
-            <NavLink
-              to="/privacy-policy"
-              style={{ textDecoration: "underline", color: "#f1590e" }}
-            >
+            <NavLink to="/privacy-policy" className={styles.terms_link}>
               privacy policy{" "}
             </NavLink>{" "}
             at Padicoins. If by any means you do not agree with or understand
             any of the terms contained herein, kindly desist from using this
             service. We reserve the right to update, revise, or otherwise,
             reissue these terms without prior notice to you.
-          </p>
+          </div>
 
-          <p>
+          <div>
             <h3
               style={{
                 marginBottom: "-20px",
@@ -420,8 +418,14 @@ const Terms = () => {
               suspension, constraint, or end of your account or your access to
               any part of the platform as clearly expressed in this agreement.
             </p>
-          </p>
+          </div>
         </div>
+        <NavLink
+          to="/"
+          className={`${styles.terms_link} ${styles.back_homepage}`}
+        >
+          <AiOutlineArrowLeft style={{ paddingTop: "2px" }} /> Back to homepage
+        </NavLink>
       </div>
     </>
   );

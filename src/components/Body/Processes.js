@@ -1,30 +1,30 @@
 import styles from "./styles.module.css";
-import Fade from "react-reveal/Fade"
-import Zoom from "react-reveal/Zoom"
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 import { processes } from "../../Data/details";
 
 const Processes = () => {
   return (
     <section className={styles.process}>
-    <Fade big left cascade >
-      <h2 className={`${styles.process__heading} ${styles.underline}`}>
-        How it works
-      </h2>
+      <Fade big left cascade>
+        <h2 className={`${styles.process__heading} ${styles.underline}`}>
+          How it works
+        </h2>
       </Fade>
       <div className={styles.process__stage}>
         {processes.map((p, i) => (
-          <Zoom delay={(i)*500}>
-          <div className={styles.process__stage_select} key = {p.title}>
-            <div className={styles.process__stage_select_img}>
-              <img src={p.image} alt={p.title} />
+          <Zoom delay={i * 500} key={i}>
+            <div className={styles.process__stage_select} key={p.title}>
+              <div className={styles.process__stage_select_img}>
+                <img src={p.image} alt={p.title} />
+              </div>
+              <p
+                className={`${styles.process__stage_select_main} ${styles.color}`}
+              >
+                {p.title}
+              </p>
+              <p className={styles.process__stage_select_sub}>{p.text}</p>
             </div>
-            <p
-              className={`${styles.process__stage_select_main} ${styles.color}`}
-            >
-              {p.title}
-            </p>
-            <p className={styles.process__stage_select_sub}>{p.text}</p>
-          </div>
           </Zoom>
         ))}
       </div>

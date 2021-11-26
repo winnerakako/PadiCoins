@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 
 const Menu = ({ close }) => {
   const [wallet, setWallet] = useState(false);
+
   return (
     <div className={styles.menu}>
       <p className={styles.menu_cancel} onClick={close}>
@@ -21,7 +22,7 @@ const Menu = ({ close }) => {
           setWallet(true);
         }}
       >
-        Wallet
+        Track Wallet
       </NavLink>
       <NavLink to="/#contact" className={styles.menu_links}>
         Contact

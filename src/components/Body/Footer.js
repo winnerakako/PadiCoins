@@ -48,17 +48,16 @@ const Footer = () => {
                     {l.name}
                   </NavLink>
                 ) : (
-                  <p
+                  <span
                     className={styles.footer__developers_list_item}
                     onClick={() => {
                       l.name === "Sell Crypto"
                         ? scrollToTop()
                         : noticeHandler();
                     }}
-                    style={{ fontSize: "smaller", cursor: "pointer" }}
                   >
                     {l.name}{" "}
-                  </p>
+                  </span>
                 )}
               </li>
             ))}

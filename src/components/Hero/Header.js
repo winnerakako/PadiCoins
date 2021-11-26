@@ -21,23 +21,37 @@ const Header = ({ background = "#FEF2EC" }) => {
         <ul className={styles.nav__link}>
           {header_links.map((l) => (
             <li className={styles.nav__link_list} key={l.name}>
-              <NavLink
-                to={l.path}
-                className={`${styles.nav__link_list_item} ${
-                  window.location.href.includes(l.path)
-                    ? styles.underline
-                    : null
-                }`}
-              >
-                {l.name}
-              </NavLink>
+              {window.location.href.includes("terms-and-conditions") ||
+              window.location.href.includes("privacy-policy") ? (
+                <NavLink
+                  to={l.path}
+                  className={`${styles.nav__link_list_item} ${
+                    window.location.href.includes(l.path)
+                      ? styles.underline
+                      : null
+                  }`}
+                >
+                  {l.name}
+                </NavLink>
+              ) : (
+                <a
+                  href={l.path}
+                  className={`${styles.nav__link_list_item} ${
+                    window.location.href.includes(l.path)
+                      ? styles.underline
+                      : null
+                  }`}
+                >
+                  {l.name}
+                </a>
+              )}
             </li>
           ))}
           <span
             onClick={() => setWallet(true)}
             style={{ fontWeight: "500", cursor: "pointer" }}
           >
-            Wallet
+            Track Wallet
           </span>
         </ul>
         <a href="/" className={`${styles.nav__button} ${styles.btn}`}>

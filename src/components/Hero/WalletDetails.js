@@ -18,12 +18,18 @@ const WalletDetails = ({ wallet, close }) => {
     <div className={`${styles.wallet_container}`}>
       <div className={styles.wallet_address}>
         <div className={styles.wallet_address_info}>
-          <p style = {{fontWeight:"500"}}>TRANSFER TO OUR WALLET</p>
-          <p className={styles.wallet_address_paragraph}>
-           Send coins to the address or scan the qrcode below. Check your email / spam folder
-            for more details.
-            {wallet.coin.symbol === "ETH" && <p style = {{color:"red", fontWeight:"bold", marginTop:"10px"}}>*Note: We only accept Ethereum erc20 tokens. </p>}
-          </p>
+          <p style={{ fontWeight: "500" }}>TRANSFER TO OUR WALLET</p>
+          <div className={styles.wallet_address_paragraph}>
+            Send coins to the address or scan the qrcode below. Check your email
+            / spam folder for more details.
+            {wallet.coin.symbol === "ETH" && (
+              <p
+                style={{ color: "red", fontWeight: "bold", marginTop: "10px" }}
+              >
+                *Note: We only accept Ethereum erc20 tokens.{" "}
+              </p>
+            )}
+          </div>
           <p>{wallet.coin.symbol} ADDRESS</p>
           <p className={styles.wallet_address_address_1}>{wallet.address} </p>
         </div>

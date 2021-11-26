@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import Header from "../Hero/Header";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 import styles from "./styles.module.css";
 
 const Policy = () => {
@@ -125,7 +127,7 @@ const Policy = () => {
           any content, practices or privacy terms of third party websites or the
           services they provide.
         </p>
-        <h3 className={styles.list_h4}>Changes to policy</h3>
+        <h3 className={styles.list_h4}>Changes to Policy</h3>
         <p>
           We may change our privacy policy every once in a while. We will always
           post such update on this page to notify you. Ensure you check here
@@ -140,7 +142,7 @@ const Policy = () => {
           for any changes. Changes to this privacy policy take effect from the
           day they are posted on this page.
         </p>
-        <h3 className={styles.list_h4}>Children under 18</h3>
+        <h3 className={styles.list_h4}>Children Under 18</h3>
         <p>
           Our services are not meant for anybody younger than 18 years. If we
           find any account of an underage individual, we will delete it.
@@ -163,6 +165,12 @@ const Policy = () => {
           By using the service, you consent to the collection and use of data as
           contained in this agreement.
         </p>
+        <NavLink
+          to="/"
+          className={`${styles.terms_link} ${styles.back_homepage}`}
+        >
+          <AiOutlineArrowLeft style={{ paddingTop: "2px" }} /> Back to homepage
+        </NavLink>
       </div>
     </>
   );

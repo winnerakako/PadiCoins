@@ -105,6 +105,8 @@ section {
   }
   .nav {
     padding: 1rem !important;
+
+    position: relative !important;
   }
   .menuBar {
     display: block !important;
@@ -668,6 +670,7 @@ section {
 .nav {
   position: fixed;
   z-index: 9999;
+  width: 100%;
   padding: 1rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;

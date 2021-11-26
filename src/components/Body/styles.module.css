@@ -841,6 +841,13 @@ section {
   margin-bottom: 10px;
   color: #f1590e;
 }
+.terms_link {
+  text-decoration: underline;
+  color: #f1590e;
+}
+.back_homepage {
+  margin-left: 40%;
+}
 .list_h4 {
   color: #f1590e;
   margin-top: 30px;
@@ -852,4 +859,9 @@ section {
 }
 .terms_ordered_list1 li {
   margin-bottom: 10px;
+}
+.footer__developers_list_item {
+  font-size: smaller;
+  cursor: pointer;
+  display: block;
 }
