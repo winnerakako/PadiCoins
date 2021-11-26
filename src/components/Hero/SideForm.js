@@ -256,7 +256,7 @@ const SideForm = () => {
                   {selectFields.bank.display &&
                     selectFields.coin.value.type === "erc20" && (
                       <p className={styles.account_error}>
-                        *Note: We only accept Ethereum{" "}
+                        *Note: We only accept Ethereum&nbsp;
                         {selectFields.coin.value.type}.
                       </p>
                     )}

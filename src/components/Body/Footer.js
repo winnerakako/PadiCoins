@@ -41,6 +41,10 @@ const Footer = () => {
             {f.links.map((l) => (
               <li className={styles.footer__developers_list} key={l.name}>
                 {l.path ? (
+                  l.path.includes("#") ? <a href = {l.path}   className={styles.footer__developers_list_item}>
+{l.name}
+                  </a>
+                  :
                   <NavLink
                     to={l.path}
                     className={styles.footer__developers_list_item}
