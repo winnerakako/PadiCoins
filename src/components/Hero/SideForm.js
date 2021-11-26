@@ -84,7 +84,7 @@ const SideForm = () => {
   };
 
   const getValues = (field1, field2, value) => {
-    console.log(value)
+    console.log(value);
     let newFields = Object.assign({}, selectFields);
     newFields[field1].display = true;
     newFields[field2].value = value;
@@ -205,7 +205,9 @@ const SideForm = () => {
     <>
       <p ref={topRef}></p>
       <div className={styles.hero__cta}>
-        <p className={styles.hero__cta_step} style = {{paddingTop:"30px"}}>Step {step2 ? "2" : "1"} of 2</p>
+        <p className={styles.hero__cta_step} style={{ paddingTop: "30px" }}>
+          Step {step2 ? "2" : "1"} of 2
+        </p>
         <div className={styles.hero__cta_progress}>
           <div className={styles.hero__cta_progress_img1}>
             <img src={person1} alt="person-img" />
@@ -251,7 +253,13 @@ const SideForm = () => {
                       close={() => toggleDropdown("coin")}
                     />
                   )}
-                  {selectFields.bank.display && selectFields.coin.value.type === "erc20" && <p className={styles.account_error}>*Note: We only accept Ethereum {selectFields.coin.value.type}.</p>}
+                  {selectFields.bank.display &&
+                    selectFields.coin.value.type === "erc20" && (
+                      <p className={styles.account_error}>
+                        *Note: We only accept Ethereum{" "}
+                        {selectFields.coin.value.type}.
+                      </p>
+                    )}
                 </div>
 
                 {selectFields.bank.display && (
@@ -363,7 +371,12 @@ const SideForm = () => {
                       />{" "}
                       I hearby agree that I have read and understood Padicoins
                       policies, terms and conditions found
-                      <span className={styles.track_wallet_link}>here.</span>
+                      <a
+                        href="/terms-and-conditions"
+                        className={styles.track_wallet_link}
+                      >
+                        here.
+                      </a>
                     </p>
                     <div className={styles.submit_btn}>
                       <button onClick={submitHandler} disabled>

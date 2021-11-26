@@ -4,25 +4,25 @@ import { header_links } from "../../Data/links";
 import TrackWallet from "./TrackWallet";
 import Menu from "./Menu";
 import { FaBars } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import styles from "./styles.module.css";
 
-const Header = () => {
+const Header = ({ background = "#FEF2EC" }) => {
   const [wallet, setWallet] = useState(false);
   const [menu, setMenu] = useState(false);
 
   return (
     <>
-      <nav className={styles.nav}>
+      <nav className={styles.nav} style={{ background: background }}>
         <div className={styles.nav__logo}>
-            <img src={logo} alt="logo-img" className = {styles.nav__logo_image} />
+          <img src={logo} alt="logo-img" className={styles.nav__logo_image} />
         </div>
 
         <ul className={styles.nav__link}>
           {header_links.map((l) => (
             <li className={styles.nav__link_list} key={l.name}>
-              <a
-                href={l.path}
-                
+              <NavLink
+                to={l.path}
                 className={`${styles.nav__link_list_item} ${
                   window.location.href.includes(l.path)
                     ? styles.underline
@@ -30,10 +30,15 @@ const Header = () => {
                 }`}
               >
                 {l.name}
-              </a>
+              </NavLink>
             </li>
           ))}
-            <span onClick={() => setWallet(true)} style = {{fontWeight:"500", cursor:"pointer"}}>Wallet</span>
+          <span
+            onClick={() => setWallet(true)}
+            style={{ fontWeight: "500", cursor: "pointer" }}
+          >
+            Wallet
+          </span>
         </ul>
         <a href="/" className={`${styles.nav__button} ${styles.btn}`}>
           Get Started

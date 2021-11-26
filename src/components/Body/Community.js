@@ -1,5 +1,6 @@
-import React from "react";
 import styles from "./styles.module.css";
+import { NavLink } from "react-router-dom";
+
 const Community = () => {
   const scrollToTop = (e) => {
     e?.preventDefault();
@@ -18,14 +19,14 @@ const Community = () => {
           Skip those unnecessary registrations and let's get down to business!
         </p>
       </div>
-      <a
-        href="/"
+      <NavLink
+        to="/"
         role="button"
         onClick={scrollToTop}
         className={`${styles.info__button} ${styles.btn}`}
       >
         GET STARTED
-      </a>
+      </NavLink>
     </section>
   );
 };

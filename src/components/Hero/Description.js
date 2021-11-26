@@ -1,15 +1,12 @@
-
-import styles from "./styles.module.css";
 import SideForm from "./SideForm";
-import Slide from "react-reveal/Slide"
-
-
+import Slide from "react-reveal/Slide";
+import { NavLink } from "react-router-dom";
+import styles from "./styles.module.css";
 
 const Description = () => {
   return (
     <div>
       <section className={styles.hero}>
-      
         <div className={styles.hero__welcome}>
           <h1 className={styles.hero__welcome_main}>
             Sell crypto
@@ -19,19 +16,19 @@ const Description = () => {
           </h1>
           <p className={styles.hero__welcome_sub}>
             Padi<span className={styles.color}>Coins</span> is the easiest way
-            to buy and sell crypto in Nigeria. 
+            to buy and sell crypto in Nigeria.
             <br /> No payment delay. No stress.
           </p>
 
-          <a
-            href="/"
+          <NavLink
+            to="/"
             className={`${styles.hero__welcome_button} ${styles.btn}`}
           >
             Get Started
-          </a>
+          </NavLink>
         </div>
         <Slide right>
-        <SideForm />
+          <SideForm />
         </Slide>
       </section>
     </div>

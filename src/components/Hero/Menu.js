@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TrackWallet from "./TrackWallet";
+import { NavLink } from "react-router-dom";
 import styles from "./styles.module.css";
 
 const Menu = ({ close }) => {
@@ -9,8 +10,11 @@ const Menu = ({ close }) => {
       <p className={styles.menu_cancel} onClick={close}>
         X
       </p>
-      <a
-        href="/"
+      <NavLink to="/" className={styles.menu_links}>
+        Home
+      </NavLink>
+      <NavLink
+        to="/"
         className={styles.menu_links}
         onClick={(e) => {
           e.preventDefault();
@@ -18,10 +22,10 @@ const Menu = ({ close }) => {
         }}
       >
         Wallet
-      </a>
-      <a href="/#contact" className={styles.menu_links}>
+      </NavLink>
+      <NavLink to="/#contact" className={styles.menu_links}>
         Contact
-      </a>
+      </NavLink>
       {/* <a href="/#contact" className={styles.menu_links}>
         Log In
       </a>

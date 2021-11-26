@@ -15,7 +15,6 @@ export const header_links = [
     path: "/#contact",
     name: "Contact",
   },
- 
 ];
 
 export const footer_links = [
@@ -43,9 +42,14 @@ export const footer_links = [
         name: "About Us",
         path: "/#about",
       },
+
+      {
+        name: "Terms and Conditions",
+        path: "/terms-and-conditions",
+      },
       {
         name: "Privacy Policy",
-        path: "/",
+        path: "/privacy-policy",
       },
     ],
   },
@@ -54,20 +58,16 @@ export const footer_links = [
     links: [
       {
         name: "Buy Crypto",
-       
       },
       {
         name: "Sell Crypto",
-    
       },
       {
         name: "Trade Crypto",
-    
       },
       {
         name: "Download Our App",
-      
-      }
+      },
     ],
   },
 ];
