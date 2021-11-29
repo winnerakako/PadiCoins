@@ -88,7 +88,8 @@ section {
   .track_wallet_container {
     font-size: smaller;
     opacity: 1;
-    margin-top: 15% !important;
+    margin-top: 28% !important;
+    margin: 0 10px;
   }
 
   .track_span_hide {
@@ -183,7 +184,9 @@ section {
 .underline-white::before {
   background-color: #fff;
 }
-
+.hero__welcome {
+  margin-top: 30px;
+}
 .hero__cta_register_heading,
 .hero__cta_signIn_heading {
   font-size: 1.5rem;
@@ -2447,8 +2450,8 @@ select {
   height: 100%;
 
   color: black;
-  padding: 5% 3%;
-  margin-top: 3%;
+  margin: 0 10px;
+  margin-top: 150px;
 }
 .padi_wallet_name {
   position: absolute;
@@ -2493,9 +2496,11 @@ select {
   border-bottom: 1px solid white;
 }
 .track_wallet_header {
-  margin: 15px auto 5px;
+  /* margin: 15px auto 5px; */
   background-color: #f1590e;
   color: white;
+  display: flex;
+  justify-content: space-around;
 }
 .track_wallet_header span {
   width: 20%;
@@ -2513,7 +2518,7 @@ select {
   display: flex;
   color: black;
   border-bottom: 1px solid #f1590e;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .track_list_item span {

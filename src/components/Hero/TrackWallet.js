@@ -8,12 +8,6 @@ import {
 } from "react-icons/ai";
 import styles from "./styles.module.css";
 
-const dateHelper = (str) => {
-  const formatted = new Date(str).toLocaleString();
-  let date = formatted.split(",")[0];
-  date = `${date.split("/")[1]}/${date.split("/")[0]}/${date.split("/")[2]}`;
-  return `${date},${formatted.split(",")[1]}`;
-};
 
 const TrackWallet = ({ close }) => {
   const [value, setValue] = useState(
@@ -38,7 +32,7 @@ const TrackWallet = ({ close }) => {
         .then((res) => res.json())
         .then((data) => {
           setLoading(false);
-
+console.log(data, "data")
           if (data.success) {
             localStorage.setItem("track_id", JSON.stringify(value));
 
@@ -122,24 +116,28 @@ const TrackWallet = ({ close }) => {
               </p>
             ) : (
               <>
-                <p style={{ textAlign: "left" }}>
+                <p style={{ textAlign: "left", marginBottom:"10px" }}>
                   Transactions update as at {new Date().toLocaleDateString()}
                 </p>
                 <div className={styles.track_wallet_header}>
-                  <span className={styles.track_span_date}>Date</span>
-                  <span className={styles.track_span_coin}> Coin</span>
-                  <span className={styles.track_span_sent}>Sent</span>
+                  <span>Date</span>
+                 
+                  <span> Coin</span>
+                 
+                  <span >Sent</span>
                   <span>Received</span>
-                  <span>Confirmations</span>
+                  
+                
                   <span className={styles.track_span_hide}>Complete</span>
+                 
                   <span className={styles.track_span_hide}>Hash</span>
                 </div>
                 <ul className={styles.track_ul}>
                   {wallet.transactions?.map((t) => (
                     <li key={t.id} className={styles.track_list_item}>
-                      <span>{dateHelper(t.confimed_at)}</span>
+                      <span>{new Date(t.created_at).toLocaleString()}</span>
                       <span>{wallet.coin_symbol}</span>
-                      <span>
+                      <span style={{paddingLeft:"25px"}}>
                         {t.amount_received}{" "}
                         <AiOutlineArrowUp style={{ color: "red" }} />
                         <br /> ({t.status})
@@ -147,9 +145,9 @@ const TrackWallet = ({ close }) => {
                       <span>
                         {t.amount_paid}{" "}
                         <AiOutlineArrowDown style={{ color: "green" }} />
-                        <br /> ({t.payment_status})
+                        <br /> 
                       </span>
-                      <span>{t.confirmations}</span>
+                      
                       <span className={styles.track_span_hide}>
                         {t.complete}
                       </span>
