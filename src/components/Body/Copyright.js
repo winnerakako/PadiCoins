@@ -6,8 +6,10 @@ const Copyright = () => {
   return (
     <div className={styles.footer__copyright}>
       <p className={styles.footer__copyright_text}>
-      <img src = {logo} className = {styles.copyright_img} alt = "padicoins-logo"/>
-      PadiCoins &copy; 2021</p>
+        <img src={logo} className={styles.copyright_img} alt="padicoins-logo" />
+        <span>PadiCoins &copy; 2021</span>
+       
+      </p>
 
       <div className={styles.footer__copyright_social}>
         <a href="https://facebook.com/PadiCoins-102301852283964">

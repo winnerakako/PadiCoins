@@ -1,5 +1,5 @@
-import {useState, useRef} from 'react'
-import styles from "./styles.module.css"
+import { useState, useRef } from "react";
+import styles from "./styles.module.css";
 import { VscSearch } from "react-icons/vsc";
 
 const Dropdown = ({ items, arr, getValues, close }) => {
@@ -23,10 +23,14 @@ const Dropdown = ({ items, arr, getValues, close }) => {
 
   return (
     <>
-      <div className={styles.overlay} onClick={close}></div>
+      <div className={styles.overlay_dropdown} onClick={close}></div>
       <div
         className={styles.dropdown}
-        style={items.length > 10 ? { height: "300px" } : { height: "auto" }}
+        style={
+          items.length > 10
+            ? { height: "310px", bottom: "97%" }
+            : { height: "auto", top: "100%" }
+        }
       >
         {items.length > 20 && (
           <>
@@ -53,4 +57,4 @@ const Dropdown = ({ items, arr, getValues, close }) => {
     </>
   );
 };
-export default Dropdown
+export default Dropdown;

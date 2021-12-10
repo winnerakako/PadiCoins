@@ -1,3 +1,31 @@
 .fab {
   font-size: 1.5rem;
 }
+.App {
+  background: #fef2ec;
+  overflow-x: hidden;
+}
+.overall_overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.5;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* position: absolute; */
+  background-size: cover;
+  background-image: url("./Images/blackback.jpg");
+  width: 100vw;
+  height: 100vh;
+}

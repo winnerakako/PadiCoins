@@ -1,36 +1,79 @@
+import { useState, useEffect } from "react";
 import SideForm from "./SideForm";
 import Slide from "react-reveal/Slide";
-import { NavLink } from "react-router-dom";
+import {
+  FaBitcoin,
+  FaEthereum,
+  FaHandPointDown,
+  FaHandPointRight,
+} from "react-icons/fa";
 import styles from "./styles.module.css";
+let t;
+const catchyPhrases = [
+  "Sell Crypto Easily ",
+  "No Hassle, No Stress",
+  "No Sign Up Needed",
+  "Get Paid Instantly",
+];
 
-const Description = () => {
+const Description = ({ data }) => {
+  const [text, setText] = useState("Sell Crypto Easily");
+  const [appearing, setAppearing] = useState(false);
+
+  useEffect(() => {
+    t = setInterval(() => {
+      setText(catchyPhrases[Math.round(Math.random() * 3)]);
+      setAppearing(true);
+      setTimeout(() => {
+        setAppearing(false);
+      }, 3000);
+    }, 5000);
+
+    return () => {
+      clearInterval(t);
+    };
+  }, []);
+
   return (
     <div>
-      <section className={styles.hero}>
+      <div className={styles.hero}>
         <div className={styles.hero__welcome}>
-          <h1 className={styles.hero__welcome_main}>
-            Sell crypto
-            <span className={styles.color} style={{ marginLeft: "7px" }}>
-              Instantly.
-            </span>
+          <h1
+            className={`${appearing && styles.appearing} ${
+              styles.hero__welcome_main
+            }`}
+          >
+            {text}
           </h1>
+
           <p className={styles.hero__welcome_sub}>
             Padi<span className={styles.color}>Coins</span> is the easiest way
             to buy and sell crypto in Nigeria.
             <br /> No payment delay. No stress.
           </p>
 
-          <NavLink
-            to="/"
+          <p className={styles.supported_crypto_container}>
+            Supported:{" "}
+            <span className={styles.supported_crypto}>
+              <FaBitcoin /> <FaEthereum style={{ color: "purple" }} />
+            </span>{" "}
+          </p>
+
+          <button
+            // to="/"
             className={`${styles.hero__welcome_button} ${styles.btn}`}
           >
-            Get Started
-          </NavLink>
+            Let's go!
+            <span>
+              <FaHandPointRight className={styles.hero_pointer_right} />{" "}
+              <FaHandPointDown className={styles.hero_pointer_down} />{" "}
+            </span>
+          </button>
         </div>
         <Slide right>
-          <SideForm />
+          <SideForm data={data} />
         </Slide>
-      </section>
+      </div>
     </div>
   );
 };

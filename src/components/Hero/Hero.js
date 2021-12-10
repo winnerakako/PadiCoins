@@ -1,15 +1,14 @@
-import React from "react";
 import Description from "./Description";
 import Header from "./Header";
-import styles from "./styles.module.css";
 
-const Hero = () => {
+const Hero = ({ data }) => {
   return (
-    <>
-      <div className={styles.wave}></div>
+    <div style={{ position: "relative" }}>
+      {/* <div className={styles.wave}></div> */}
       <Header />
-      <Description />
-    </>
+
+      <Description data={data} />
+    </div>
   );
 };
 

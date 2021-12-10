@@ -1,10 +1,7 @@
-import React from 'react'
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 
-const Notice = ({message}) => {
-    return (
-        <p className = {styles.notice_paragraph}>{message}</p>
-    )
-}
+const Notice = ({ message }) => {
+  return <p className={styles.notice_paragraph}>{message}</p>;
+};
 
-export default Notice
+export default Notice;

@@ -84,7 +84,6 @@ const SideForm = () => {
   };
 
   const getValues = (field1, field2, value) => {
-    console.log(value);
     let newFields = Object.assign({}, selectFields);
     newFields[field1].display = true;
     newFields[field2].value = value;

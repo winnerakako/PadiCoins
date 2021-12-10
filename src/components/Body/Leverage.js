@@ -1,61 +1,72 @@
-import React from "react";
 import styles from "./styles.module.css";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import { leverage } from "../../Data/details";
+import Advantages from "./Advantages";
+import { FaRegKissWinkHeart } from "react-icons/fa";
+import padicon from "../../Images/padicon.png";
 
 const Leverage = () => {
   return (
-    <>
-      <Fade left big cascade>
-        <h2 className={`${styles.leverage__heading}  ${styles.underline}`}>
-          Our Leverage
-        </h2>
-      </Fade>
-      <div className={styles.leverage_us}>
-        <div className={styles.leverage_us__about}>
-          <p className={styles.leverage_us__about_main}>ABOUT US</p>
-          <p className={styles.leverage_us__about_sub}>
-            Sell crypto in minutes.
-          </p>
-        </div>
+    <div>
+      <div className={styles.body_color}>
+        <div className={styles.about_us_border_image}></div>
+        <Fade left big cascade>
+          <h2 className={`${styles.leverage__heading}  ${styles.underline}`}>
+            Our Leverage
+          </h2>
+        </Fade>
+        <section className={styles.leverage_us}>
+          <div className={styles.leverage_us__about}>
+            <h2 className={styles.leverage_us__about_main}>ABOUT US</h2>
+            <p className={styles.leverage_us__about_sub}>
+              Sell crypto in minutes.
+            </p>
+            <p className={styles.leverage_us__about_sub_light}>
+              As an exchange platform with a vision to see almost every Nigerian
+              benefitting from the enormous opportunities of cryptocurrencies,
+              we are here to make the process easy, fast and seamless.
+            </p>
+            <div className={styles.div_image}>
+              <img src={padicon} alt="padicoin icon" />
+            </div>
+          </div>
 
-        <div className={styles.leverage_us__text}>
-          <p className={styles.leverage_us__text_sub}>
-            Padi<span className={styles.color}>Coins</span> exists to simplify
-            the process of trading cryptocurrencies in Nigeria.
-          </p>
-          <p>
-            As an exchange platform with a vision to see almost every Nigerian
+          <div className={styles.leverage_us__text}>
+            <h1 className={`${styles.different_font} ${styles.color}`}>
+              WHY CHOOSE US?{" "}
+            </h1>
+            <p className={styles.leverage_us__text_sub}>
+              Padi<span className={styles.color}>Coins</span> exists to simplify
+              the selling of cryptocurrencies in Nigeria.
+            </p>
+
+            <p>
+              With us, you are guaranteed:
+              <ul className={styles.about_us_ul}>
+                <li>No extra charges</li>
+                <li>No payment delay</li>
+                <li>No scam</li>
+              </ul>
+              <p style={{ marginTop: "20px" }}>
+                ....We also give sweet rates.{" "}
+                <FaRegKissWinkHeart className={styles.kissface} />
+              </p>
+              {/* As an exchange platform with a vision to see almost every Nigerian
             benefitting from the enormous opportunities of cryptocurrencies, we
-            are here to make the process easy, fast and seamless.{" "}
-          </p>
+            are here to make the process easy, fast and seamless.{" "} */}
+            </p>
 
-          <p>
+            {/* <p>
             Our rates are comparatively the best in Nigeria as we strive to
             provide the quickest and most reliable crypto trading experiences to
             our users.
-          </p>
-        </div>
+          </p> */}
+          </div>
+        </section>
       </div>
-      <div className={styles.leverage__leverage}>
-        {leverage.map((l, i) => (
-          <Zoom top delay={i * 500} key={i}>
-            <div className={styles.leverage__leverage_trust} key={l.title}>
-              <div className={styles.leverage__leverage_trust_img}>
-                <img src={l.image} alt="badge-img" />
-              </div>
-              <p
-                className={`${styles.leverage__leverage_trust_main} ${styles.color}`}
-              >
-                {l.title}
-              </p>
-              <p className={styles.leverage__leverage_trust_sub}>{l.text}</p>
-            </div>
-          </Zoom>
-        ))}
-      </div>
-    </>
+      <div className={styles.about_us_border_image}></div>
+
+      <Advantages />
+    </div>
   );
 };
 

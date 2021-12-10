@@ -1,8 +1,10 @@
 import { frequentQuestions } from "../../Data/details";
 import questions from "../../Images/questions.png";
+// import padicoin from "../../Images/padicon_main.svg";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import styles from "./styles.module.css";
+
 const FAQ = () => {
   const toggleHandler = (i) => {
     const accordion = document.getElementsByClassName(
@@ -12,6 +14,31 @@ const FAQ = () => {
   };
   return (
     <section className={styles.faq} id="faq">
+      {/* <div className={`${styles.faq__animation} ${styles.fade_1}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div>
+      <div className={`${styles.faq__animation} ${styles.fade_2}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div>
+      <div className={`${styles.faq__animation} ${styles.fade_3}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div>
+      <div className={`${styles.faq__animation} ${styles.fade_4}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div>
+      <div className={`${styles.faq__animation} ${styles.fade_5}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div>
+      <div className={`${styles.faq__animation} ${styles.fade_6}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div>
+      <div className={`${styles.faq__animation} ${styles.fade_7}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div>
+      <div className={`${styles.faq__animation} ${styles.fade_8}`}>
+        <img src={padicoin} alt="padicoin_svg" />
+      </div> */}
+
       <div className={styles.faq__image}>
         <img src={questions} alt="questions-img" />
       </div>

@@ -56,9 +56,7 @@ section {
   .nav__button {
     display: none !important;
   }
-  .nav__link {
-    flex: 0 !important;
-  }
+
   .nav__logo_image {
     margin-left: 3% !important;
   }
@@ -88,7 +86,6 @@ section {
   .track_wallet_container {
     font-size: smaller;
     opacity: 1;
-    margin-top: 28% !important;
     margin: 0 10px;
   }
 
@@ -106,8 +103,6 @@ section {
   }
   .nav {
     padding: 1rem !important;
-
-    position: relative !important;
   }
   .menuBar {
     display: block !important;
@@ -116,16 +111,27 @@ section {
     width: 40% !important;
   }
 }
+.supported_crypto_container {
+  display: flex;
+  align-items: center;
+}
+.supported_crypto {
+  font-size: 1.6rem;
+  color: goldenrod;
+  margin-left: 10px;
+}
+
 .nav__logo_image {
-  width: 50%;
+  width: 70%;
   height: 100%;
   margin-left: 10%;
 }
 .menuBar {
   display: none;
   color: #f1590e;
-  margin-top: -10px;
-  font-weight: bolder;
+  font-size: 1.6rem;
+  margin-right: 10px;
+  cursor: pointer;
 }
 .color {
   color: #f1590e;
@@ -186,6 +192,7 @@ section {
 }
 .hero__welcome {
   margin-top: 30px;
+  color: #f2fefc;
 }
 .hero__cta_register_heading,
 .hero__cta_signIn_heading {
@@ -671,7 +678,7 @@ section {
 }
 
 .nav {
-  position: fixed;
+  /* position: fixed; */
   z-index: 9999;
   width: 100%;
   padding: 1rem 3rem;
@@ -694,8 +701,6 @@ section {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin-top: -16px;
-  flex: 1;
 }
 @media only screen and (max-width: 43.75em) {
   .nav__link {
@@ -731,14 +736,13 @@ section {
   }
 }
 .nav__button {
-  padding: 0.8rem 2rem;
-  border-radius: 1.6rem;
+  padding: 0.9rem 2rem;
+  border-radius: 0.6rem;
   text-decoration: none;
-  display: block;
-  margin-top: -16px;
+  display:block;
 }
 .nav__logo {
-  width: 30%;
+  width: 20%;
 }
 
 .wave {
@@ -768,7 +772,15 @@ section {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0 2%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../Images/Orangeback.jpg");
 }
 @media only screen and (max-width: 43.75em) {
   .hero {
@@ -779,22 +791,80 @@ section {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 1rem;
+
     gap: 5rem;
   }
 }
 .hero__welcome {
-  width: 60%;
+  width: 86%;
   margin-right: 20px;
+  padding-left: 6%;
+}
+.hero_pointer_right {
+  color: white;
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  top: 8px;
+  animation: pointingright 800ms linear infinite;
+}
+@keyframes pointingright {
+  from {
+    right: 15px;
+  }
+  to {
+    right: 10px;
+  }
+}
+.hero_pointer_down {
+  color: white;
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  top: 8px;
+  display: none;
+  animation: pointingdown 800ms linear infinite;
+}
+@keyframes pointingdown {
+  from {
+    top: 2px;
+  }
+  to {
+    top: 8px;
+  }
 }
 @media only screen and (max-width: 43.75em) {
   .hero__welcome {
     width: 100%;
+    /* margin-top: 100px; */
+  }
+  .hero_pointer_right {
+    display: none;
+  }
+  .hero_pointer_down {
+    display: block;
   }
 }
 .hero__welcome_main {
-  font-size: 2.5rem;
+  font-size: 70px !important;
+  font-weight: bold;
   margin-bottom: 2rem;
+  font-family: "Amatic SC", cursive;
+  white-space: nowrap;
+  text-shadow: 5px 5px 1px rgba(241, 89, 14, 0.505766);
+  line-height: 5rem;
+}
+
+.appearing {
+  animation: appearing 1s ease-in-out;
+}
+@keyframes appearing {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media only screen and (max-width: 69em) {
   .hero__welcome_main {
@@ -808,21 +878,24 @@ section {
 }
 @media only screen and (max-width: 43.75em) {
   .hero__welcome_main {
-    margin-bottom: 1rem;
+    font-size: 55px !important;
+    white-space: break-spaces;
+    /* margin-top: -10px; */
   }
 }
+
 .hero__welcome_sub {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 @media only screen and (max-width: 69em) {
-  .hero__welcome_sub {
+  /* .hero__welcome_sub {
     font-size: 1rem;
-  }
+  } */
 }
 @media only screen and (max-width: 56.25em) {
   .hero__welcome_sub {
-    font-size: 0.8rem;
+    /* font-size: 0.8rem; */
     margin-right: 1rem;
   }
 }
@@ -834,16 +907,28 @@ section {
 .hero__welcome_button {
   display: inline-block;
   margin-top: 1rem;
+  width: 150px !important;
 }
 .hero__cta {
   padding: 0rem 1.5rem;
-  width: 33rem;
+  width: 85%;
+  margin: auto;
   background: #fff;
   -webkit-box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
   border-radius: 0.95rem;
   padding-bottom: 3rem;
 }
+
+@media only screen and (min-width: 700px) and (max-width: 850px) {
+  .hero__welcome {
+    width: 44% !important;
+  }
+  .hero__welcome h1 {
+    font-size: 47px !important;
+  }
+}
+
 @media only screen and (max-width: 43.75em) {
   .hero__cta {
     width: auto;
@@ -851,16 +936,10 @@ section {
 }
 @media only screen and (max-width: 25em) {
   .hero__cta {
-    width: 21rem;
     margin-top: -80px;
-    margin-left: -30px;
   }
 }
-@media only screen and (max-width: 22.5em) {
-  .hero__cta {
-    width: 18rem;
-  }
-}
+
 .hero__cta > * {
   margin: 2rem 0;
 }
@@ -1837,6 +1916,16 @@ select {
     width: 56px;
     height: 56px;
   }
+  .account_error {
+    left: -10px;
+    white-space: nowrap;
+  }
+  /* .marquee_text2 span {
+    display: none !important;
+  }
+  .marquee_text span {
+    animation: scrolling 15s linear infinite !important;
+  } */
 }
 @media only screen and (max-width: 43.75em) {
   .dashboard-bitcoin__options a h4 {
@@ -2196,29 +2285,40 @@ select {
 }
 .dropdown {
   position: absolute;
-  top: 3rem;
   width: 100%;
+
   overflow-y: scroll;
   height: auto;
   background: #fff;
   z-index: 99999;
+
   padding-top: 5px;
   padding-left: 5px;
   font-size: 0.8rem;
+  right: 0;
 }
 .dropdown p {
   height: 25px;
   line-height: 25px;
   padding-left: 10px;
+  margin-bottom: 6px;
 }
 .dropdown p:hover {
   background: #f1590e;
   color: white;
 }
+.overlay_dropdown {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .overlay {
   height: 100vh;
-  width: 100%;
-  position: fixed;
+  width: 100vw;
+  position: absolute;
+
   top: 0;
   left: 0;
 }
@@ -2227,6 +2327,9 @@ select {
   width: 100%;
   position: fixed;
   background: #000;
+  opacity: 0.5;
+  z-index: 9999;
+
   top: 0;
   left: 0;
 }
@@ -2521,23 +2624,25 @@ select {
   justify-content: space-around;
   align-items: center;
 }
-.track_list_item span {
+.track_list_item tr,
+.track_wallet_header td {
   width: 15%;
   text-align: center;
 }
 .menu {
-  width: 50%;
+  width: 80%;
   height: 100vh;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 999999999999;
   color: #000;
-  background: #fef2fc;
-  animation: sliding 1s linear;
+  background: #fff;
+  /* background: #fef2fc; */
+  animation: sliding 500ms ease-in-out;
 }
 .menu_links {
   height: 30px;
@@ -2554,6 +2659,10 @@ select {
   margin-left: auto;
   padding-right: 10px;
   margin-bottom: 25%;
+  font-weight: bold;
+  color: #9c9090;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 @keyframes sliding {
   from {
@@ -2562,4 +2671,197 @@ select {
   to {
     right: 0;
   }
+}
+.slidingOut {
+  animation: slidingOut 500ms ease-in-out;
+}
+@keyframes slidingOut {
+  from {
+    right: 0;
+  }
+  to {
+    right: -500px;
+  }
+}
+.marquee {
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f1590e;
+  /* background-color: #2e1406;
+  background-color: #47130e; */
+  /* background-color: #9d5633; */
+  color: #f2fefc !important;
+  /* background-color: rgba(241, 89, 14, 1); */
+}
+.marquee_text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrolling 30s linear infinite;
+}
+.marquee_text2 span {
+  animation-delay: 15s;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+@media screen and (max-width: 440px) {
+  .marquee_text2 span {
+    display: none;
+  }
+}
+.marquee_text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 30px;
+  /* color: #460606; */
+  font-size: smaller;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.calculator_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  /* flex-direction: column; */
+  background-size: cover;
+  /* position: relative; */
+  background-image: url("../../Images/Orangeback.jpg");
+}
+.calculatorNavWrapper {
+  padding-top: 128px;
+  width: 70%;
+  padding-bottom: 50px;
+}
+.calculatorNavWrapper h1,
+.privacyNavWrapper h1 {
+  /* font-size: 40px; */
+  font-weight: 900;
+  color: #f1590e;
+}
+.calculatorNavWrapper p {
+  font-weight: 500;
+  /* font-size: 13px; */
+  color: #fff;
+}
+.btcSell {
+  /* font-size: 20px; */
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem !important;
+}
+.calculatorFormWrap {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: hsla(0, 0%, 100%, 0.08);
+  height: 67px;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin-bottom: 0.25rem !important;
+}
+.form_group1 {
+  margin-bottom: 1rem;
+}
+.flexjustifybetween {
+  justify-content: space-between !important;
+  display: flex;
+}
+.btcText {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 15px;
+}
+
+
+.mr_2 {
+  margin-right: .5rem!important;
+}
+
+.d_flex{
+  display: flex !important
+}
+.inputScroll {
+  margin-top: 8px;
+  /* margin-left: -3px; */
+  background: transparent !important;
+  border: none !important;
+  outline: none;
+  /* font-size: 24px !important; */
+}
+.form_control1 {
+  flex: 0 0 50%;
+  display: block;
+  width: 100%;
+  height: -moz-calc(1.5em + 0.75rem + 2px);
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -moz-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.calculator_scroll{
+  font-size: 2.4rem;
+  margin-top: 10px;
+  background: #f1590e;
+  color: white;
+  border-radius: 50%;
+}
+.scrollMoney {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-top: 23px;
+}
+.currencyChange {
+  /* font-size: 13px; */
+  font-weight: 500;
+  color: #ffcf59;
+  margin-left: 1rem !important;
+}
+.btcSell {
+  /* font-size: 20px; */
+  font-weight: 800;
+  color: #fff;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.calculator_btn_div {
+  display: flex;
+  margin-top: 20px;
+  width: 200px;
+  justify-content: space-between;
+}
+.calculator_btn {
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  background: #f1590e;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  /* display: inline; */
+}
+.pressed {
+  box-shadow: inset 1px 1px 9px #2b1104;
+  border: 1px solid #f1590e;
 }

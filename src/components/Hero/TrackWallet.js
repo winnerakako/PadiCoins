@@ -8,7 +8,6 @@ import {
 } from "react-icons/ai";
 import styles from "./styles.module.css";
 
-
 const TrackWallet = ({ close }) => {
   const [value, setValue] = useState(
     JSON.parse(localStorage.getItem("track_id"))
@@ -32,7 +31,7 @@ const TrackWallet = ({ close }) => {
         .then((res) => res.json())
         .then((data) => {
           setLoading(false);
-console.log(data, "data")
+          console.log(data, "data");
           if (data.success) {
             localStorage.setItem("track_id", JSON.stringify(value));
 
@@ -116,50 +115,47 @@ console.log(data, "data")
               </p>
             ) : (
               <>
-                <p style={{ textAlign: "left", marginBottom:"10px" }}>
+                <p style={{ textAlign: "left", marginBottom: "10px" }}>
                   Transactions update as at {new Date().toLocaleDateString()}
                 </p>
-                <div className={styles.track_wallet_header}>
-                  <span>Date</span>
-                 
-                  <span> Coin</span>
-                 
-                  <span >Sent</span>
-                  <span>Received</span>
-                  
-                
-                  <span className={styles.track_span_hide}>Complete</span>
-                 
-                  <span className={styles.track_span_hide}>Hash</span>
-                </div>
-                <ul className={styles.track_ul}>
+
+                <table style={{ width: "100%" }}>
+                  <th className={styles.track_wallet_header}>
+                    <td>Date</td>
+                    <td>Coin</td>
+                    <td>Sent</td>
+                    <td>Received</td>
+                    <td className={styles.track_span_hide}>Complete</td>
+                    <td className={styles.track_span_hide}>Hash</td>
+                  </th>
                   {wallet.transactions?.map((t) => (
-                    <li key={t.id} className={styles.track_list_item}>
-                      <span>{new Date(t.created_at).toLocaleString()}</span>
-                      <span>{wallet.coin_symbol}</span>
-                      <span style={{paddingLeft:"25px"}}>
-                        {t.amount_received}{" "}
+                    <tbody className={styles.track_list_item}>
+                      <tr>
+                        {new Date(t.created_at).toLocaleString().split(",")[0]}
+                        <br />
+                        {new Date(t.created_at).toLocaleString().split(",")[1]}
+                      </tr>
+                      <tr>{wallet.coin_symbol}</tr>
+                      <tr style={{ whiteSpace: "nowrap" }}>
+                        {(+t.amount_received).toFixed(4)}
                         <AiOutlineArrowUp style={{ color: "red" }} />
-                        <br /> ({t.status})
-                      </span>
-                      <span>
+                      </tr>
+                      <tr style={{ whiteSpace: "nowrap" }}>
                         {t.amount_paid}{" "}
                         <AiOutlineArrowDown style={{ color: "green" }} />
-                        <br /> 
-                      </span>
-                      
-                      <span className={styles.track_span_hide}>
-                        {t.complete}
-                      </span>
-                      <span
+                        <br />
+                      </tr>
+
+                      <tr className={styles.track_span_hide}>{t.complete}</tr>
+                      <tr
                         className={styles.track_span_hide}
                         style={{ wordBreak: "break-word", fontSize: "smaller" }}
                       >
                         {t.hash}
-                      </span>
-                    </li>
+                      </tr>
+                    </tbody>
                   ))}
-                </ul>
+                </table>
               </>
             )}
           </div>
