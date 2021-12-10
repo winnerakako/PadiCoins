@@ -9,9 +9,9 @@ const scrollToTop = () => {
 // import crypto from "../../Images/crypto_portfolio.png";
 const MoreInfo = () => {
   return (
-    <div style={{ position: "relative" }}>
+    <>
       <div className={styles.about_us_border_image}></div>
-      <div className={styles.overlay}></div>
+      
       <section className={styles.cta}>
         {/* <div className={styles.process_avatar}>
           <img src={crypto} alt="transfer" />
@@ -51,7 +51,7 @@ const MoreInfo = () => {
         {/* <div className={styles.cta_wave}></div> */}
       </section>
       <div className={styles.about_us_border_image}></div>
-    </div>
+    </>
   );
 };
 
