@@ -735,11 +735,14 @@ section {
     font-size: 0.9rem;
   }
 }
+.calculator_description {
+  margin: 20px 0 30px;
+}
 .nav__button {
   padding: 0.9rem 2rem;
   border-radius: 0.6rem;
   text-decoration: none;
-  display:block;
+  display: block;
 }
 .nav__logo {
   width: 20%;
@@ -2508,7 +2511,7 @@ select {
   }
 }
 .track_container input {
-  height: 30px;
+  height: 50px;
   width: 48%;
   padding: 5px 10px;
   outline: none;
@@ -2528,10 +2531,11 @@ select {
 .track_container button {
   background: #f1590e;
   color: white;
-  padding: 1% 3%;
+  padding: 15px;
   margin-top: 25px;
   border-radius: 4px;
   cursor: pointer;
+  width: 200px;
 }
 .track_loading {
   display: flex;
@@ -2785,13 +2789,12 @@ select {
   margin-top: 15px;
 }
 
-
 .mr_2 {
-  margin-right: .5rem!important;
+  margin-right: 0.5rem !important;
 }
 
-.d_flex{
-  display: flex !important
+.d_flex {
+  display: flex !important;
 }
 .inputScroll {
   margin-top: 8px;
@@ -2819,11 +2822,11 @@ select {
   -moz-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.calculator_scroll{
+.calculator_scroll {
   font-size: 2.4rem;
   margin-top: 10px;
-  background: #f1590e;
-  color: white;
+  background: #fff;
+  color: #000;
   border-radius: 50%;
 }
 .scrollMoney {

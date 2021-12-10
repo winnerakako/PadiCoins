@@ -56,10 +56,14 @@ section {
   background-size: contain;
 }
 .different_font {
-  font-size: 40px;
+  font-size: 70px;
   font-weight: bold;
   font-family: "Amatic SC", cursive;
   line-height: 5rem;
+}
+.leverage_us__about_sub2 {
+  font-size: 1rem;
+  margin-top: 10px;
 }
 .about_us_ul {
   list-style-type: disclosure-closed;
@@ -193,7 +197,7 @@ section {
 .copyright_img {
   width: 4%;
   height: 10%;
-  margin-right: 10px;
+  margin-right: 4px;
 }
 @media only screen and (max-width: 69em) {
   .leverage_us__about_sub {
@@ -228,7 +232,7 @@ section {
     margin-top: 2rem;
   }
   .copyright_img {
-    width: 3%;
+    width: 6%;
   }
 }
 .appearing {
@@ -417,7 +421,7 @@ section {
   }
 }
 .process_easy {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   font-family: "Amatic SC", cursive;
   white-space: nowrap;
@@ -450,7 +454,7 @@ section {
   top: 0;
   left: 0;
   background: black;
-  opacity: 0;
+  opacity: 0.7;
 }
 .process {
   width: 100%;

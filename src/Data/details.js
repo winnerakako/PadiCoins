@@ -12,17 +12,17 @@ export const leverage = [
   {
     title: "Trusted",
     image: trustbadge,
-    text: "We prioritize the safety of our traders by integrating highly secured software that guarantees transparent, reliable and trusted exchanges.",
+    text: "We prioritize the safety of our users by integrating highly secured software that guarantees transparent, reliable and trusted exchanges.",
   },
   {
     title: "Secured Transactions",
     image: shield,
-    text: "Securely trade your crypto with our safe platform that gives you absolute control over your assests with secured multi-layer protection.",
+    text: "Securely sell your crypto with our safe platform that gives you absolute control over your assests with secured multi-layer protection.",
   },
   {
     title: "Fast Services",
     image: rocket,
-    text: "Trade instantly with our fast and easy process that gives you instant deposit and withdrawal capabilities with 24/7 quick customer support.",
+    text: "Sell instantly with our fast and easy process that gives you instant deposit and withdrawal capabilities with 24/7 quick customer support.",
   },
 ];
 export const processes = [

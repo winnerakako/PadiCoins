@@ -70,7 +70,6 @@ const TrackWallet = ({ close }) => {
 
   return (
     <>
-      <div className={styles.overlay_gray}></div>
       <div className={styles.track_container}>
         {loading ? (
           <ImSpinner6 className={`${styles.loading} ${styles.track_loading}`} />
@@ -100,7 +99,11 @@ const TrackWallet = ({ close }) => {
                 ref={inputRef}
               />
 
-              {error && <p className={styles.form_error}>{error}</p>}
+              {error && (
+                <p className={styles.form_error} style={{ fontSize: "1rem" }}>
+                  {error}
+                </p>
+              )}
 
               <button className={styles.wallet_options_copy}>Track</button>
             </form>

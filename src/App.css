@@ -3,7 +3,7 @@
 }
 .App {
   background: #fef2ec;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .overall_overlay {
   height: 100vh;

@@ -55,7 +55,7 @@ const Description = ({ data }) => {
           <p className={styles.supported_crypto_container}>
             Supported:{" "}
             <span className={styles.supported_crypto}>
-              <FaBitcoin /> <FaEthereum style={{ color: "purple" }} />
+              <FaBitcoin /> <FaEthereum />
             </span>{" "}
           </p>
 

@@ -16,7 +16,11 @@ const Leverage = () => {
         </Fade>
         <section className={styles.leverage_us}>
           <div className={styles.leverage_us__about}>
-            <h2 className={styles.leverage_us__about_main}>ABOUT US</h2>
+            <h2
+              className={`${styles.leverage_us__about_main} ${styles.different_font}`}
+            >
+              ABOUT US
+            </h2>
             <p className={styles.leverage_us__about_sub}>
               Sell crypto in minutes.
             </p>
@@ -34,19 +38,23 @@ const Leverage = () => {
             <h1 className={`${styles.different_font} ${styles.color}`}>
               WHY CHOOSE US?{" "}
             </h1>
-            <p className={styles.leverage_us__text_sub}>
+            <p className={styles.leverage_us__about_sub2}>
               Padi<span className={styles.color}>Coins</span> exists to simplify
               the selling of cryptocurrencies in Nigeria.
             </p>
 
-            <p>
+            <p className={styles.leverage_us__about_sub2}>
               With us, you are guaranteed:
               <ul className={styles.about_us_ul}>
                 <li>No extra charges</li>
                 <li>No payment delay</li>
                 <li>No scam</li>
               </ul>
-              <p style={{ marginTop: "20px" }}>
+              <p
+                style={{ marginTop: "20px" }}
+                className={styles.leverage_us__about_sub_light}
+              >
+                {" "}
                 ....We also give sweet rates.{" "}
                 <FaRegKissWinkHeart className={styles.kissface} />
               </p>
