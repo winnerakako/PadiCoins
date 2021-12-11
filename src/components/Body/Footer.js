@@ -96,12 +96,12 @@ const Footer = () => {
         <div></div>
         <FaGooglePlay />
         <p style={{ marginRight: "20px" }}>
-          Coming so on <br />
+          Coming soon on <br />
           Play store
         </p>
         <FaApple />
         <p>
-          Coming so on <br />
+          Coming soon on <br />
           App store
         </p>
       </div>
