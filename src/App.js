@@ -29,7 +29,7 @@ function App() {
           })
           .catch((err) => {});
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {});
   }, []);
 
   return (
@@ -38,14 +38,16 @@ function App() {
         <Route
           path="/"
           exact
-          render={() =>
-            // loading ? (
-            //   <Loading />
-            // ) : (
+          render={
+            () => (
+              // loading ? (
+              //   <Loading />
+              // ) : (
               <div className="App">
                 <Hero data={data} />
                 <Body />
               </div>
+            )
             // )
           }
         />

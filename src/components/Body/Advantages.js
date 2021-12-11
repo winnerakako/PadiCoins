@@ -11,19 +11,21 @@ const Advantages = () => {
   const [text, setText] = useState(leverage[0]);
   const [appearing, setAppearing] = useState(false);
   const randomize = () => {
-    let random = Math.floor(Math.random() * 3);
-
-    setText(leverage[random]);
-
-    setAppearing(true);
-    setTimeout(() => {
-      setAppearing(false);
-    }, 5000);
-  };
-  useEffect(() => {
     t = setInterval(() => {
-      randomize();
+      let random = Math.floor(Math.random() * 3);
+
+      setText(leverage[random]);
+
+      setAppearing(true);
+      setTimeout(() => {
+        setAppearing(false);
+      }, 5000);
     }, 8000);
+  };
+
+  useEffect(() => {
+    randomize();
+
     return () => {
       clearInterval(t);
     };

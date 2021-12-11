@@ -32,11 +32,11 @@ const Calculator = () => {
     fetch(GET_RATES__BITCOIN)
       .then((res) => res.json())
       .then((data) => setRateBtcUsd(data.price))
-      .catch((err) => console.log(err));
+      .catch((err) => {});
     fetch(GET_RATES__ETHEREUM)
       .then((res) => res.json())
       .then((data) => setRateEthUsd(data.price))
-      .catch((err) => console.log(err));
+      .catch((err) => {});
   }, []);
 
   useEffect(() => {

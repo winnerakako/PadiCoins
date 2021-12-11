@@ -22,9 +22,9 @@ const Menu = ({ close }) => {
         <p className={styles.menu_cancel} onClick={slidingOut}>
           X
         </p>
-        <a href="/" className={styles.menu_links}>
+        <Link to="/" className={styles.menu_links}>
           Home
-        </a>
+        </Link>
         <a
           href="/"
           className={styles.menu_links}

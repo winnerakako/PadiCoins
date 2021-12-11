@@ -141,7 +141,6 @@ const SideForm = () => {
       .catch((err) => {
         setAccountError(true);
         setVerifying(false);
-        console.log(err);
       });
   };
 
@@ -191,7 +190,7 @@ const SideForm = () => {
       .then((data) => {
         setCoins(data.data.coins);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {});
     fetch(GET_BANKS)
       .then((res) => res.json())
       .then((data) => {

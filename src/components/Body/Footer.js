@@ -1,17 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { footer_links } from "../../Data/links";
 import logo from "../../Images/padilogo.png";
 import Notice from "./Notice";
 import { Link } from "react-router-dom";
 import padicon from "../../Images/padicon.png";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
-import Slide from "react-reveal/Slide";
 import styles from "./styles.module.css";
 
-const elements = [];
 const Footer = () => {
   const [viewNotice, setViewNotice] = useState(false);
-  const [element, setElement] = useState();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -60,12 +57,12 @@ const Footer = () => {
                         {l.name}
                       </a>
                     ) : (
-                      <Link
-                        to={l.path}
+                      <a
+                        href={l.path}
                         className={styles.footer__developers_list_item}
                       >
                         {l.name}
-                      </Link>
+                      </a>
                     )
                   ) : window.location.href.includes("calculator") &&
                     l.name === "Sell Crypto" ? (

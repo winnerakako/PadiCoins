@@ -31,7 +31,6 @@ const TrackWallet = ({ close }) => {
         .then((res) => res.json())
         .then((data) => {
           setLoading(false);
-          console.log(data, "data");
           if (data.success) {
             localStorage.setItem("track_id", JSON.stringify(value));
 
@@ -43,9 +42,7 @@ const TrackWallet = ({ close }) => {
             setWallet(null);
           }
         })
-        .catch((err) => {
-          console.log(err);
-        });
+        .catch((err) => {});
     } else if (!value) {
       setForm(true);
       setTimeout(() => {
@@ -82,7 +79,7 @@ const TrackWallet = ({ close }) => {
           <button
             onClick={startTrack}
             style={{ position: "absolute", right: "3%", top: "5%" }}
-            className={styles.wallet_options_copy}
+            className={styles.wallet_options_copy_track_top}
           >
             Track Wallet
           </button>
@@ -105,7 +102,9 @@ const TrackWallet = ({ close }) => {
                 </p>
               )}
 
-              <button className={styles.wallet_options_copy}>Track</button>
+              <button className={styles.wallet_options_copy_form_btn}>
+                Track
+              </button>
             </form>
           </>
         )}
