@@ -60,6 +60,7 @@ section {
   font-weight: bold;
   font-family: "Amatic SC", cursive;
   line-height: 5rem;
+  white-space: nowrap;
 }
 .leverage_us__about_sub2 {
   font-size: 1rem;
