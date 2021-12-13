@@ -788,6 +788,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../../Images/Orangeback.jpg");
+  background-color: #110e0e;
 }
 @media only screen and (max-width: 43.75em) {
   .hero {
@@ -843,7 +844,6 @@ section {
 @media only screen and (max-width: 43.75em) {
   .hero__welcome {
     width: 100%;
-    /* margin-top: 100px; */
   }
   .hero_pointer_right {
     display: none;
@@ -887,7 +887,6 @@ section {
   .hero__welcome_main {
     font-size: 55px !important;
     white-space: break-spaces;
-    /* margin-top: -10px; */
   }
 }
 
@@ -895,14 +894,9 @@ section {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-@media only screen and (max-width: 69em) {
-  /* .hero__welcome_sub {
-    font-size: 1rem;
-  } */
-}
+
 @media only screen and (max-width: 56.25em) {
   .hero__welcome_sub {
-    /* font-size: 0.8rem; */
     margin-right: 1rem;
   }
 }
@@ -1927,12 +1921,6 @@ select {
     left: -10px;
     white-space: nowrap;
   }
-  /* .marquee_text2 span {
-    display: none !important;
-  }
-  .marquee_text span {
-    animation: scrolling 15s linear infinite !important;
-  } */
 }
 @media only screen and (max-width: 43.75em) {
   .dashboard-bitcoin__options a h4 {
@@ -2293,20 +2281,18 @@ select {
 .dropdown {
   position: absolute;
   width: 100%;
-
   overflow-y: scroll;
   height: auto;
   background: #fff;
   z-index: 99999;
-
   padding-top: 5px;
   padding-left: 5px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   right: 0;
 }
 .dropdown p {
-  height: 25px;
-  line-height: 25px;
+  height: 29px;
+  line-height: 29px;
   padding-left: 10px;
   margin-bottom: 6px;
 }
@@ -2615,7 +2601,6 @@ select {
   border-bottom: 1px solid white;
 }
 .track_wallet_header {
-  /* margin: 15px auto 5px; */
   background-color: #f1590e;
   color: white;
   display: flex;
@@ -2657,7 +2642,7 @@ select {
   z-index: 999999999999;
   color: #000;
   background: #fff;
-  /* background: #fef2fc; */
+
   animation: sliding 500ms ease-in-out;
 }
 .menu_links {
@@ -2704,11 +2689,7 @@ select {
   overflow: hidden;
   position: relative;
   background-color: #f1590e;
-  /* background-color: #2e1406;
-  background-color: #47130e; */
-  /* background-color: #9d5633; */
   color: #f2fefc !important;
-  /* background-color: rgba(241, 89, 14, 1); */
 }
 .marquee_text span {
   display: inline-block;
@@ -2738,7 +2719,6 @@ select {
   height: 100%;
   margin: 0;
   line-height: 30px;
-  /* color: #460606; */
   font-size: smaller;
   font-weight: 500;
   white-space: nowrap;
@@ -2750,9 +2730,7 @@ select {
   background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
-  /* flex-direction: column; */
   background-size: cover;
-  /* position: relative; */
   background-image: url("../../Images/Orangeback.jpg");
 }
 .calculatorNavWrapper {
@@ -2762,17 +2740,14 @@ select {
 }
 .calculatorNavWrapper h1,
 .privacyNavWrapper h1 {
-  /* font-size: 40px; */
   font-weight: 900;
   color: #f1590e;
 }
 .calculatorNavWrapper p {
   font-weight: 500;
-  /* font-size: 13px; */
   color: #fff;
 }
 .btcSell {
-  /* font-size: 20px; */
   font-weight: 800;
   color: #fff;
   margin-bottom: 0.5rem !important;
@@ -2810,11 +2785,9 @@ select {
 }
 .inputScroll {
   margin-top: 8px;
-  /* margin-left: -3px; */
   background: transparent !important;
   border: none !important;
   outline: none;
-  /* font-size: 24px !important; */
 }
 .form_control1 {
   flex: 0 0 50%;
@@ -2848,13 +2821,11 @@ select {
   margin-top: 23px;
 }
 .currencyChange {
-  /* font-size: 13px; */
   font-weight: 500;
   color: #ffcf59;
   margin-left: 1rem !important;
 }
 .btcSell {
-  /* font-size: 20px; */
   font-weight: 800;
   color: #fff;
   margin-top: 1.5rem !important;
@@ -2874,7 +2845,6 @@ select {
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  /* display: inline; */
 }
 .pressed {
   box-shadow: inset 1px 1px 9px #2b1104;

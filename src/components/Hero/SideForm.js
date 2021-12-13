@@ -303,7 +303,7 @@ const SideForm = () => {
                     {verifying && (
                       <ImSpinner6
                         className={styles.loading}
-                        style={{ fontSize: "15px", marginRight: "20px" }}
+                        style={{ fontSize: "20px", marginRight: "20px" }}
                       />
                     )}
 

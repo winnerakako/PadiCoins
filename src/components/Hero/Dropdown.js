@@ -28,7 +28,7 @@ const Dropdown = ({ items, arr, getValues, close }) => {
         className={styles.dropdown}
         style={
           items.length > 10
-            ? { height: "310px", bottom: "97%" }
+            ? { height: "320px", bottom: "97%" }
             : { height: "auto", top: "100%" }
         }
       >

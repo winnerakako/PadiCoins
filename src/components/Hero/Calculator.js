@@ -1,9 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import {
-  GET_RATES,
-  GET_RATES__BITCOIN,
-  GET_RATES__ETHEREUM,
-} from "../../Data/requests";
+import { GET_RATES__BITCOIN, GET_RATES__ETHEREUM } from "../../Data/requests";
 import Footer from "../Body/Footer";
 import Header from "./Header";
 import styles from "./styles.module.css";
@@ -16,7 +12,7 @@ const Calculator = () => {
   const [rateBtcNgn, setRateBtcNgn] = useState("");
   const [rateEthNgn, setRateEthNgn] = useState("");
   const [type, setType] = useState("BTC");
-  const [usdPrice, setUsdPrice] = useState();
+  // const [usdPrice, setUsdPrice] = useState();
   const scrollRef = useRef(null);
   const [searchTerm, setSearchTerm] = useState(0);
   const switchConvert = () => {

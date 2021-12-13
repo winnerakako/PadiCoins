@@ -10,6 +10,7 @@ let t;
 const Advantages = () => {
   const [text, setText] = useState(leverage[0]);
   const [appearing, setAppearing] = useState(false);
+
   const randomize = () => {
     t = setInterval(() => {
       let random = Math.floor(Math.random() * 3);
@@ -19,7 +20,7 @@ const Advantages = () => {
       setAppearing(true);
       setTimeout(() => {
         setAppearing(false);
-      }, 5000);
+      }, 6000);
     }, 8000);
   };
 

@@ -1,14 +1,7 @@
-// import Card from "@material-ui/core/Card";
-// import CardContent from "@material-ui/core/CardContent";
-// import CardMedia from "@material-ui/core/CardMedia";
-// import Typography from "@material-ui/core/Typography";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
 import { processes } from "../../Data/details";
-import transfer from "../../Images/transfer_money.png";
-import confirm from "../../Images/cart-successful.jpg";
-import crypto from "../../Images/crypto_portfolio.png";
 
 import { FcCheckmark } from "react-icons/fc";
 import styles from "./styles.module.css";
@@ -16,9 +9,6 @@ import styles from "./styles.module.css";
 const Processes = () => {
   return (
     <section className={styles.process}>
-      {/* <div className={styles.process_avatar}>
-        <img src={crypto} alt="transfer" />
-      </div> */}
       <div className={styles.about_us_border_image}></div>
 
       <div style={{ padding: "2rem" }}>
